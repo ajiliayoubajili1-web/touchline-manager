@@ -2,6 +2,16 @@
 
 const app = document.getElementById("app");
 
+function inviteToast(message) {
+  const existing = document.querySelector(".invite-toast");
+  if (existing) existing.remove();
+  const el = document.createElement("div");
+  el.className = "invite-toast";
+  el.textContent = message;
+  document.body.appendChild(el);
+  setTimeout(() => el.remove(), 3500);
+}
+
 function esc(value) {
   return String(value ?? "").replace(/[&<>"']/g, (c) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
@@ -365,6 +375,7 @@ async function renderShell(dashboardData, targetView = "dashboard") {
           <h1>${crest(dashboardData.club.name)}${esc(dashboardData.club.name)}</h1>
           <span class="pill primary">${esc(dashboardData.season.difficulty)}</span>
           <span class="pill">${esc(dashboardData.season.id)} &middot; week ${dashboardData.season.week}</span>
+          <button class="btn ghost" id="inviteFriend">Invite a friend</button>
           <button class="btn" id="globalSave">Save</button>
         </div>
         <input type="hidden">
@@ -381,6 +392,22 @@ async function renderShell(dashboardData, targetView = "dashboard") {
   });
   const globalSave = document.getElementById("globalSave");
   if (globalSave) globalSave.addEventListener("click", doSave);
+  const inviteBtn = document.getElementById("inviteFriend");
+  if (inviteBtn) {
+    inviteBtn.addEventListener("click", async () => {
+      const url = location.href.split("#")[0].split("?")[0];
+      const text = "Try Touchline Manager — run your own football club! " + url;
+      if (navigator.share) {
+        try { await navigator.share({ title: "Touchline Manager", text, url }); return; } catch (err) { return; }
+      }
+      try {
+        await navigator.clipboard.writeText(text);
+        inviteToast("Link copied — send it to your friend!");
+      } catch (err) {
+        window.prompt("Copy this link to invite a friend:", url);
+      }
+    });
+  }
   document.getElementById("saveNow").addEventListener("click", doSave);
   document.getElementById("newCareer").addEventListener("click", async () => {
     await api("/api/session", { method: "POST", body: JSON.stringify({ action: "reset" }) });
