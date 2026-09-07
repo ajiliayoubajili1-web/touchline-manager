@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Run your own football club, week by week. Tactics, transfers, training and the full 90 minutes." />
+  <meta name="theme-color" content="#0b1b2b" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Touchline" />
+  <title>Touchline Manager</title>
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/app.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="splash" class="splash">
+      <div class="splash-card">
+        <div class="brand splash-brand">Touchline <em>Manager</em></div>
+        <p class="splash-sub">Connecting to the world&hellip;</p>
+      </div>
+    </div>
+  </div>
+  <script src="/app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("/sw.js").catch(function (err) {
+          console.warn("service worker registration failed", err);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+saves/
+custom_names.json
+manager/ui/static/photos/
+*.log
+__pycache__/
+*.pyc
+.pytest_cache/
+.git/
+test-results/
+Gordon/

@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: touchline-manager
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/status
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: "8765"
+      - key: SAVE_DIR
+        value: /app/saves
