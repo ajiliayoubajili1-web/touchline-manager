@@ -46,7 +46,7 @@ def setup_cup(state: CareerState) -> None:
             id=CUP_ID,
             name="Continental Cup",
             comp_type=CompetitionType.CUP,
-            nation="Valland",
+            nation="International",
             tier=1,
             club_ids=list(apex.club_ids),
             params={"rounds": list(ROUND_ROUTING.keys()), "teams": 16, "legs": 1},

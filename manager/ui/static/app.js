@@ -182,7 +182,7 @@ async function renderSetup() {
 
   const nationSel = document.getElementById("nation");
   setup.nationalities.forEach((n) => nationSel.add(new Option(n, n)));
-  nationSel.value = "Valland";
+  nationSel.value = setup.nationalities.includes("England") ? "England" : setup.nationalities[0] || "";
 
   const diffSel = document.getElementById("difficulty");
   setup.difficulties.forEach((d) => diffSel.add(new Option(d.toUpperCase(), d)));

@@ -122,7 +122,7 @@ def build_routes(sessions: SessionService) -> dict:
             "version": "0.1.0",
             "seed": seed,
             "season": world.season_id,
-            "federation": "Valland",
+            "federation": "Super League",
             "clubs": len(world.clubs),
             "players": len(world.players),
         }

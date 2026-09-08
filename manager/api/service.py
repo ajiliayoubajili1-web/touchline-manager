@@ -34,6 +34,7 @@ from manager.core.validate import ValidationError, validate_squad_selection, val
 from manager.systems.squads import build_best_xi
 from manager.save.files import delete_save, list_saves
 from manager.data.coaches import coach_by_key, roster
+from manager.data import names
 
 def coach_name(key: str) -> str:
     profile = coach_by_key(key)
@@ -61,7 +62,7 @@ class GameService:
             state = new_career(
                 first_name=payload.get("first_name", ""),
                 last_name=payload.get("last_name", ""),
-                nationality=payload.get("nationality", "Valland"),
+                nationality=payload.get("nationality", "England"),
                 club_id=payload.get("club_id", ""),
                 difficulty=payload.get("difficulty", "manager"),
                 objective_key=payload.get("objective", "steady"),
@@ -772,8 +773,7 @@ def build_setup_view(seed: int) -> dict:
         "seed": seed,
         "clubs": clubs_view,
         "difficulties": [str(d.value) for d in Difficulty],
-        "nationalities": ["Valland", "Northeim", "Serevia", "Caldria", "Ostara",
-                          "Meridian", "Vantica", "Ashkefar", "Bralore", "Thuvia", "Kyren"],
+        "nationalities": names.NATIONS,
         "coaches": roster(),
         "objectives": [
             {

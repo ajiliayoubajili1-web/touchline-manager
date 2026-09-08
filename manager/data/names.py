@@ -27,12 +27,13 @@ LAST_NAMES = [
     "Jessop", "Kendrick", "Lowe", "Marrow", "Nex", "Odel", "Pryce", "Rourke",
 ]
 
+# real-world footballing nations; keep weights aligned with NATIONS order.
 NATIONS = [
-    "Valland", "Northeim", "Serevia", "Caldria", "Ostara", "Meridian",
-    "Vantica", "Ashkefar", "Bralore", "Thuvia", "Kyren", "Dalmar",
+    "France", "Spain", "Tunisia", "England", "Germany",
+    "Netherlands", "Italy", "Argentina", "Brazil", "Portugal",
 ]
 
-NATION_WEIGHTS = [0.62, 0.06, 0.05, 0.05, 0.05, 0.04, 0.04, 0.03, 0.03, 0.02, 0.01, 0.00]
+NATION_WEIGHTS = [0.20, 0.15, 0.05, 0.25, 0.10, 0.07, 0.05, 0.05, 0.05, 0.03]
 
 POSITION_POOLS = {
     "GK": ["GK"],

@@ -605,7 +605,7 @@ def _settle_titles(state: CareerState, position: int | None) -> None:
             week=state.seasons[state.current_season].total_weeks,
             category=NewsCategory.MATCH_RESULT,
             headline=f"{club.name} lift the {', '.join(titles)}!",
-            body="A season to remember in Valland.",
+            body="A season to remember across the continent.",
             clubs_involved=[club.id],
         ))
         state.news = state.news[-80:]
