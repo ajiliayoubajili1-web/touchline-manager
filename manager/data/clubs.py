@@ -44,7 +44,7 @@ CLUB_DEFS: list[ClubDef] = [
     ClubDef("monaco", "Monaco", "Monaco", "Stade Louis II", 18523, "#e63312", "#ffffff", 78, 1924),
     ClubDef("bilbao", "Athletic Bilbao", "Bilbao", "San Mames", 53289, "#ee2523", "#ffffff", 77, 1898),
     ClubDef("leicester", "Leicester City", "Leicester", "King Power Stadium", 32262, "#003090", "#fdb515", 76, 1884),
-    ClubDef("como", "Como", "Como", "Stadio Sinigaglia", 13602, "#2563eb", "#ffffff", 70, 1907),
+    ClubDef("manutd", "Manchester United", "Manchester", "Old Trafford", 74310, "#da291c", "#fbe122", 86, 1878),
     # --- one very, very bad club ----------------------------------------
     ClubDef("sfax", "Club Sportif Sfaxien", "Sfax", "Stade Taieb Mhiri", 11000, "#000000", "#ffffff", 42, 1928),
 ]
@@ -52,7 +52,7 @@ CLUB_DEFS: list[ClubDef] = [
 REPUTATION_ORDER = sorted((d.slug for d in CLUB_DEFS), key=lambda s: next(d.reputation for d in CLUB_DEFS if d.slug == s), reverse=True)
 
 TIER_1_SLUGS = ["northbay", "barca", "city", "bayern", "liverpool", "milan_ac", "paris", "dortmund", "arsenal", "inter"]
-TIER_2_SLUGS = ["roma", "leverkusen", "westham", "monaco", "bilbao", "leicester", "como"]
+TIER_2_SLUGS = ["roma", "leverkusen", "westham", "monaco", "bilbao", "leicester", "manutd"]
 TIER_3_SLUGS = ["sfax"]
 
 

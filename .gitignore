@@ -5,6 +5,7 @@ manager/ui/static/photos/
 !manager/ui/static/photos/
 manager/ui/static/photos/*
 !manager/ui/static/photos/clb_sfax_*.png
+!manager/ui/static/photos/clb_manutd_*.png
 *.log
 __pycache__/
 *.pyc
