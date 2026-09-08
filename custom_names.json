@@ -1,0 +1,31 @@
+{
+  "_doc": "Club Sportif Sfaxien (CSS) real player names. Edit freely; entries not listed keep generated names.",
+  "clubs": {},
+  "players": {
+    "clb_sfax_00": {"first_name": "Aymen", "last_name": "Dahmen"},
+    "clb_sfax_01": {"first_name": "Hamza", "last_name": "Jelassi"},
+    "clb_sfax_02": {"first_name": "Ahmed", "last_name": "Mahmoud"},
+    "clb_sfax_03": {"first_name": "Wajdi", "last_name": "Bouazzi"},
+    "clb_sfax_04": {"first_name": "Zied", "last_name": "Derbali"},
+    "clb_sfax_05": {"first_name": "Saddem", "last_name": "Ben Ali"},
+    "clb_sfax_06": {"first_name": "Ghazi", "last_name": "Ayadi"},
+    "clb_sfax_07": {"first_name": "Houssem", "last_name": "Ben Hassine"},
+    "clb_sfax_08": {"first_name": "Nabil", "last_name": "Trabelsi"},
+    "clb_sfax_09": {"first_name": "Wassim", "last_name": "Kammoun"},
+    "clb_sfax_10": {"first_name": "Ala", "last_name": "Zeghal"},
+    "clb_sfax_11": {"first_name": "Ferjani", "last_name": "Sassi"},
+    "clb_sfax_12": {"first_name": "Imad", "last_name": "Louati"},
+    "clb_sfax_13": {"first_name": "Yassine", "last_name": "Chamkhi"},
+    "clb_sfax_14": {"first_name": "Chiheb", "last_name": "Labidi"},
+    "clb_sfax_15": {"first_name": "Mohamed", "last_name": "Gloulou"},
+    "clb_sfax_16": {"first_name": "Hazem", "last_name": "Mastouri"},
+    "clb_sfax_17": {"first_name": "Aymen", "last_name": "Sfaxi"},
+    "clb_sfax_18": {"first_name": "Malek", "last_name": "Miladi"},
+    "clb_sfax_19": {"first_name": "Firas", "last_name": "Ben Larbi"},
+    "clb_sfax_20": {"first_name": "Chedli", "last_name": "Hmida"},
+    "clb_sfax_21": {"first_name": "Mohamed Slim", "last_name": "Ben Othmane"},
+    "clb_sfax_22": {"first_name": "Mohamed", "last_name": "Dhaoui"},
+    "clb_sfax_23": {"first_name": "Youssef", "last_name": "Belaieli"},
+    "clb_sfax_24": {"first_name": "Moaiez", "last_name": "Kasmi"}
+  }
+}

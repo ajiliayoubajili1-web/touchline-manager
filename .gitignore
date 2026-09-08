@@ -1,6 +1,10 @@
 saves/
 custom_names.json
+!custom_names.json
 manager/ui/static/photos/
+!manager/ui/static/photos/
+manager/ui/static/photos/*
+!manager/ui/static/photos/clb_sfax_*.png
 *.log
 __pycache__/
 *.pyc
