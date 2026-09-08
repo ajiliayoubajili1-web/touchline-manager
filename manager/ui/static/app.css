@@ -366,3 +366,29 @@ tr.row-next td { background: rgba(56, 189, 248, 0.12); }
   from { opacity: 0; transform: translate(-50%, 8px); }
   to { opacity: 1; transform: translate(-50%, 0); }
 }
+
+/* ---- mobile responsiveness: keep tables fully visible, no clipping ---- */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { max-width: 100%; }
+th, td { white-space: nowrap; }
+
+@media (max-width: 640px) {
+  .app-main { padding: 14px 12px; }
+  .topbar { flex-wrap: wrap; gap: 8px; }
+  .topbar h1 { font-size: 18px; flex-basis: 100%; }
+  .topbar .pill { font-size: 11px; }
+  .card { padding: 13px; }
+  .setup-wrap, #content { max-width: 100%; }
+  .name-cell { gap: 7px; }
+  .p-photo { width: 34px; height: 34px; flex-basis: 34px; }
+  .btn { padding-left: 10px; padding-right: 10px; }
+}
+
+@media (max-width: 640px) {
+  .card table, table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
+}
