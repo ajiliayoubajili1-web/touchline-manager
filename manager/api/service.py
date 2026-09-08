@@ -1315,6 +1315,7 @@ def market_view(state: CareerState, q: str = "", position: str = "", kind: str =
     season_year = _season_year(state.current_season)
     from manager.systems.transfers import LOAN_MAX, starter_map, transfer_valuation_fee
 
+    in_academy = {pid for roster in (state.academy or {}).values() for pid in roster}
     starters = starter_map(state)
     family = {
         "GK": {"GK"},
@@ -1327,6 +1328,8 @@ def market_view(state: CareerState, q: str = "", position: str = "", kind: str =
         if player.retired:
             continue
         if player.club_id == club.id:
+            continue
+        if player.id in in_academy:
             continue
         if family and str(player.preferred_position) not in family:
             continue

@@ -1,56 +1,2254 @@
 {
-  "_doc": "Club Sportif Sfaxien (CSS) real 2026-27 player names. Edit freely; entries not listed keep generated names.",
-  "clubs": {},
   "players": {
-    "clb_sfax_00": {"first_name": "Mohamed Hedi", "last_name": "Gaaloul"},
-    "clb_sfax_01": {"first_name": "Aymen", "last_name": "Dahmen"},
-    "clb_sfax_02": {"first_name": "Mohamed Ali", "last_name": "Jamia"},
-    "clb_sfax_03": {"first_name": "Hichem", "last_name": "Baccar"},
-    "clb_sfax_04": {"first_name": "Mohamed Salah", "last_name": "Mhadhebi"},
-    "clb_sfax_05": {"first_name": "Ali", "last_name": "Maaloul"},
-    "clb_sfax_06": {"first_name": "Kevin", "last_name": "Mondeko"},
-    "clb_sfax_07": {"first_name": "Mohamed Amine", "last_name": "Ben Ali"},
-    "clb_sfax_08": {"first_name": "Youssef", "last_name": "Habchia"},
-    "clb_sfax_09": {"first_name": "Rayen", "last_name": "Derbeli"},
-    "clb_sfax_10": {"first_name": "Ahmed", "last_name": "Ajjal"},
-    "clb_sfax_11": {"first_name": "Hasamadou", "last_name": "Ouedraogo"},
-    "clb_sfax_12": {"first_name": "Ammar", "last_name": "Taifour"},
-    "clb_sfax_13": {"first_name": "Travis", "last_name": "Mutyaba"},
-    "clb_sfax_14": {"first_name": "Firas", "last_name": "Sekkouhi"},
-    "clb_sfax_15": {"first_name": "Mohamed", "last_name": "Absi"},
-    "clb_sfax_16": {"first_name": "Mohamed", "last_name": "Trabelsi"},
-    "clb_sfax_17": {"first_name": "Rayen", "last_name": "Chaaben"},
-    "clb_sfax_18": {"first_name": "Mohamed Aziz", "last_name": "Sekrafi"},
-    "clb_sfax_19": {"first_name": "Youssef", "last_name": "Becha"},
-    "clb_sfax_20": {"first_name": "Iyed", "last_name": "Belwafi"},
-    "clb_sfax_21": {"first_name": "Boua", "last_name": "Diarra"},
-    "clb_sfax_22": {"first_name": "Omar", "last_name": "Ben Ali"},
-    "clb_sfax_23": {"first_name": "Emmanuel", "last_name": "Ogbole"},
-    "clb_sfax_24": {"first_name": "Mohamed Mehdi", "last_name": "Kachouri"},
-    "clb_manutd_00": {"first_name": "Andre", "last_name": "Onana", "rating": 85},
-    "clb_manutd_01": {"first_name": "Altay", "last_name": "Bayindir", "rating": 77},
-    "clb_manutd_02": {"first_name": "Elyh", "last_name": "Harrison", "rating": 68},
-    "clb_manutd_03": {"first_name": "Diogo", "last_name": "Dalot", "rating": 83},
-    "clb_manutd_04": {"first_name": "Luke", "last_name": "Shaw", "rating": 81},
-    "clb_manutd_05": {"first_name": "Lisandro", "last_name": "Martinez", "rating": 84},
-    "clb_manutd_06": {"first_name": "Noussair", "last_name": "Mazraoui", "rating": 83},
-    "clb_manutd_07": {"first_name": "Patrick", "last_name": "Dorgu", "rating": 78},
-    "clb_manutd_08": {"first_name": "Tyrell", "last_name": "Malacia", "rating": 76},
-    "clb_manutd_09": {"first_name": "Leny", "last_name": "Yoro", "rating": 82},
-    "clb_manutd_10": {"first_name": "Harry", "last_name": "Maguire", "rating": 78},
-    "clb_manutd_11": {"first_name": "Benjamin", "last_name": "Sesko", "rating": 85},
-    "clb_manutd_12": {"first_name": "Kobbie", "last_name": "Mainoo", "rating": 84},
-    "clb_manutd_13": {"first_name": "Manuel", "last_name": "Ugarte", "rating": 83},
-    "clb_manutd_14": {"first_name": "Mason", "last_name": "Mount", "rating": 80},
-    "clb_manutd_15": {"first_name": "Christian", "last_name": "Eriksen", "rating": 80},
-    "clb_manutd_16": {"first_name": "Bruno", "last_name": "Fernandes", "rating": 88},
-    "clb_manutd_17": {"first_name": "Matthew", "last_name": "Woods", "rating": 72},
-    "clb_manutd_18": {"first_name": "Jack", "last_name": "Fletcher", "rating": 68},
-    "clb_manutd_19": {"first_name": "Mboumo", "last_name": "Chunia", "rating": 70},
-    "clb_manutd_20": {"first_name": "Marcus", "last_name": "Rashford", "rating": 82},
-    "clb_manutd_21": {"first_name": "Amad", "last_name": "Diallo", "rating": 84},
-    "clb_manutd_22": {"first_name": "Rasmus", "last_name": "Hojlund", "rating": 82},
-    "clb_manutd_23": {"first_name": "Joshua", "last_name": "Zirkzee", "rating": 80},
-    "clb_manutd_24": {"first_name": "Chido Obi", "last_name": "Martin", "rating": 72}
+    "clb_northbay_00": {
+      "first_name": "Thibaut",
+      "last_name": "Courtois",
+      "rating": 90
+    },
+    "clb_northbay_01": {
+      "first_name": "Andriy",
+      "last_name": "Lunin",
+      "rating": 81
+    },
+    "clb_northbay_02": {
+      "first_name": "Fran",
+      "last_name": "Gonzalez",
+      "rating": 72
+    },
+    "clb_northbay_03": {
+      "first_name": "Eder",
+      "last_name": "Militao",
+      "rating": 87
+    },
+    "clb_northbay_04": {
+      "first_name": "Antonio",
+      "last_name": "Rudiger",
+      "rating": 86
+    },
+    "clb_northbay_05": {
+      "first_name": "Ibrahima",
+      "last_name": "Konate",
+      "rating": 86
+    },
+    "clb_northbay_06": {
+      "first_name": "Dean",
+      "last_name": "Huijsen",
+      "rating": 82
+    },
+    "clb_northbay_07": {
+      "first_name": "Trent",
+      "last_name": "Alexander-Arnold",
+      "rating": 87
+    },
+    "clb_northbay_08": {
+      "first_name": "Marc",
+      "last_name": "Cucurella",
+      "rating": 83
+    },
+    "clb_northbay_09": {
+      "first_name": "Ferland",
+      "last_name": "Mendy",
+      "rating": 82
+    },
+    "clb_northbay_10": {
+      "first_name": "Denzel",
+      "last_name": "Dumfries",
+      "rating": 79
+    },
+    "clb_northbay_11": {
+      "first_name": "Aurelien",
+      "last_name": "Tchouameni",
+      "rating": 85
+    },
+    "clb_northbay_12": {
+      "first_name": "Eduardo",
+      "last_name": "Camavinga",
+      "rating": 84
+    },
+    "clb_northbay_13": {
+      "first_name": "Federico",
+      "last_name": "Valverde",
+      "rating": 87
+    },
+    "clb_northbay_14": {
+      "first_name": "Jude",
+      "last_name": "Bellingham",
+      "rating": 90
+    },
+    "clb_northbay_15": {
+      "first_name": "Bernardo",
+      "last_name": "Silva",
+      "rating": 86
+    },
+    "clb_northbay_16": {
+      "first_name": "Arda",
+      "last_name": "Guler",
+      "rating": 82
+    },
+    "clb_northbay_17": {
+      "first_name": "Brahim",
+      "last_name": "Diaz",
+      "rating": 82
+    },
+    "clb_northbay_18": {
+      "first_name": "Thiago",
+      "last_name": "Pitarch",
+      "rating": 66
+    },
+    "clb_northbay_19": {
+      "first_name": "Vinicius",
+      "last_name": "Junior",
+      "rating": 89
+    },
+    "clb_northbay_20": {
+      "first_name": "Rodrygo",
+      "last_name": "Goes",
+      "rating": 85
+    },
+    "clb_northbay_21": {
+      "first_name": "Yan",
+      "last_name": "Diomande",
+      "rating": 78
+    },
+    "clb_northbay_22": {
+      "first_name": "Kylian",
+      "last_name": "Mbappe",
+      "rating": 91
+    },
+    "clb_northbay_23": {
+      "first_name": "Endrick",
+      "last_name": "Felipe",
+      "rating": 82
+    },
+    "clb_northbay_24": {
+      "first_name": "Carlos",
+      "last_name": "Espi",
+      "rating": 78
+    },
+    "clb_barca_00": {
+      "first_name": "Joan",
+      "last_name": "Garcia",
+      "rating": 86
+    },
+    "clb_barca_01": {
+      "first_name": "Wojciech",
+      "last_name": "Szczesny",
+      "rating": 77
+    },
+    "clb_barca_02": {
+      "first_name": "Dominik",
+      "last_name": "Livakovic",
+      "rating": 78
+    },
+    "clb_barca_03": {
+      "first_name": "Pau",
+      "last_name": "Cubarsi",
+      "rating": 85
+    },
+    "clb_barca_04": {
+      "first_name": "Eric",
+      "last_name": "Garcia",
+      "rating": 83
+    },
+    "clb_barca_05": {
+      "first_name": "Andreas",
+      "last_name": "Christensen",
+      "rating": 82
+    },
+    "clb_barca_06": {
+      "first_name": "Xavi",
+      "last_name": "Espart",
+      "rating": 72
+    },
+    "clb_barca_07": {
+      "first_name": "Jules",
+      "last_name": "Kounde",
+      "rating": 87
+    },
+    "clb_barca_08": {
+      "first_name": "Alejandro",
+      "last_name": "Balde",
+      "rating": 84
+    },
+    "clb_barca_09": {
+      "first_name": "Joao",
+      "last_name": "Cancelo",
+      "rating": 82
+    },
+    "clb_barca_10": {
+      "first_name": "Gerard",
+      "last_name": "Martin",
+      "rating": 78
+    },
+    "clb_barca_11": {
+      "first_name": "Rodri",
+      "last_name": "Hernandez",
+      "rating": 90
+    },
+    "clb_barca_12": {
+      "first_name": "Marc",
+      "last_name": "Bernal",
+      "rating": 78
+    },
+    "clb_barca_13": {
+      "first_name": "Pedri",
+      "last_name": "Gonzalez",
+      "rating": 90
+    },
+    "clb_barca_14": {
+      "first_name": "Gavi",
+      "last_name": "Paez",
+      "rating": 85
+    },
+    "clb_barca_15": {
+      "first_name": "Frenkie",
+      "last_name": "de Jong",
+      "rating": 86
+    },
+    "clb_barca_16": {
+      "first_name": "Fermin",
+      "last_name": "Lopez",
+      "rating": 83
+    },
+    "clb_barca_17": {
+      "first_name": "Dani",
+      "last_name": "Olmo",
+      "rating": 84
+    },
+    "clb_barca_18": {
+      "first_name": "Brian",
+      "last_name": "Farinas",
+      "rating": 70
+    },
+    "clb_barca_19": {
+      "first_name": "Lamine",
+      "last_name": "Yamal",
+      "rating": 90
+    },
+    "clb_barca_20": {
+      "first_name": "Raphinha",
+      "last_name": "Raphael",
+      "rating": 88
+    },
+    "clb_barca_21": {
+      "first_name": "Karim",
+      "last_name": "Adeyemi",
+      "rating": 82
+    },
+    "clb_barca_22": {
+      "first_name": "Anthony",
+      "last_name": "Gordon",
+      "rating": 81
+    },
+    "clb_barca_23": {
+      "first_name": "Gabriel",
+      "last_name": "Jesus",
+      "rating": 82
+    },
+    "clb_barca_24": {
+      "first_name": "Roony",
+      "last_name": "Bardghji",
+      "rating": 75
+    },
+    "clb_city_00": {
+      "first_name": "Gianluigi",
+      "last_name": "Donnarumma",
+      "rating": 89
+    },
+    "clb_city_01": {
+      "first_name": "Geronimo",
+      "last_name": "Rulli",
+      "rating": 78
+    },
+    "clb_city_02": {
+      "first_name": "Marcus",
+      "last_name": "Bettinelli",
+      "rating": 72
+    },
+    "clb_city_03": {
+      "first_name": "Ruben",
+      "last_name": "Dias",
+      "rating": 87
+    },
+    "clb_city_04": {
+      "first_name": "Marc",
+      "last_name": "Guehi",
+      "rating": 85
+    },
+    "clb_city_05": {
+      "first_name": "Abdukodir",
+      "last_name": "Khusanov",
+      "rating": 82
+    },
+    "clb_city_06": {
+      "first_name": "Vitor",
+      "last_name": "Reis",
+      "rating": 78
+    },
+    "clb_city_07": {
+      "first_name": "Josko",
+      "last_name": "Gvardiol",
+      "rating": 86
+    },
+    "clb_city_08": {
+      "first_name": "Rayan",
+      "last_name": "Ait-Nouri",
+      "rating": 83
+    },
+    "clb_city_09": {
+      "first_name": "Rico",
+      "last_name": "Lewis",
+      "rating": 81
+    },
+    "clb_city_10": {
+      "first_name": "Josh",
+      "last_name": "Wilson-Esbrand",
+      "rating": 73
+    },
+    "clb_city_11": {
+      "first_name": "Mateo",
+      "last_name": "Kovacic",
+      "rating": 82
+    },
+    "clb_city_12": {
+      "first_name": "Ayyoub",
+      "last_name": "Bouaddi",
+      "rating": 80
+    },
+    "clb_city_13": {
+      "first_name": "Elliot",
+      "last_name": "Anderson",
+      "rating": 84
+    },
+    "clb_city_14": {
+      "first_name": "Enzo",
+      "last_name": "Fernandez",
+      "rating": 85
+    },
+    "clb_city_15": {
+      "first_name": "Nico",
+      "last_name": "O'Reilly",
+      "rating": 75
+    },
+    "clb_city_16": {
+      "first_name": "Floyd",
+      "last_name": "Samba",
+      "rating": 67
+    },
+    "clb_city_17": {
+      "first_name": "Phil",
+      "last_name": "Foden",
+      "rating": 85
+    },
+    "clb_city_18": {
+      "first_name": "Rayan",
+      "last_name": "Cherki",
+      "rating": 85
+    },
+    "clb_city_19": {
+      "first_name": "Jeremy",
+      "last_name": "Doku",
+      "rating": 85
+    },
+    "clb_city_20": {
+      "first_name": "Antoine",
+      "last_name": "Semenyo",
+      "rating": 83
+    },
+    "clb_city_21": {
+      "first_name": "Iliman",
+      "last_name": "Ndiaye",
+      "rating": 82
+    },
+    "clb_city_22": {
+      "first_name": "Erling",
+      "last_name": "Haaland",
+      "rating": 91
+    },
+    "clb_city_23": {
+      "first_name": "Allan",
+      "last_name": "Santos",
+      "rating": 77
+    },
+    "clb_city_24": {
+      "first_name": "Ryan",
+      "last_name": "McAidoo",
+      "rating": 68
+    },
+    "clb_bayern_00": {
+      "first_name": "Manuel",
+      "last_name": "Neuer",
+      "rating": 87
+    },
+    "clb_bayern_01": {
+      "first_name": "Jonas",
+      "last_name": "Urbig",
+      "rating": 78
+    },
+    "clb_bayern_02": {
+      "first_name": "Sven",
+      "last_name": "Ulreich",
+      "rating": 76
+    },
+    "clb_bayern_03": {
+      "first_name": "Dayot",
+      "last_name": "Upamecano",
+      "rating": 87
+    },
+    "clb_bayern_04": {
+      "first_name": "Kim",
+      "last_name": "Min-jae",
+      "rating": 84
+    },
+    "clb_bayern_05": {
+      "first_name": "Jonathan",
+      "last_name": "Tah",
+      "rating": 87
+    },
+    "clb_bayern_06": {
+      "first_name": "Hiroki",
+      "last_name": "Ito",
+      "rating": 80
+    },
+    "clb_bayern_07": {
+      "first_name": "Alphonso",
+      "last_name": "Davies",
+      "rating": 86
+    },
+    "clb_bayern_08": {
+      "first_name": "Sacha",
+      "last_name": "Boey",
+      "rating": 81
+    },
+    "clb_bayern_09": {
+      "first_name": "Josip",
+      "last_name": "Stanisic",
+      "rating": 80
+    },
+    "clb_bayern_10": {
+      "first_name": "Nathaniel",
+      "last_name": "Brown",
+      "rating": 78
+    },
+    "clb_bayern_11": {
+      "first_name": "Aleksandar",
+      "last_name": "Pavlovic",
+      "rating": 83
+    },
+    "clb_bayern_12": {
+      "first_name": "Konrad",
+      "last_name": "Laimer",
+      "rating": 79
+    },
+    "clb_bayern_13": {
+      "first_name": "Joshua",
+      "last_name": "Kimmich",
+      "rating": 88
+    },
+    "clb_bayern_14": {
+      "first_name": "Tom",
+      "last_name": "Bischof",
+      "rating": 80
+    },
+    "clb_bayern_15": {
+      "first_name": "Ismael",
+      "last_name": "Saibari",
+      "rating": 77
+    },
+    "clb_bayern_16": {
+      "first_name": "Lennart",
+      "last_name": "Karl",
+      "rating": 72
+    },
+    "clb_bayern_17": {
+      "first_name": "Jamal",
+      "last_name": "Musiala",
+      "rating": 87
+    },
+    "clb_bayern_18": {
+      "first_name": "Michael",
+      "last_name": "Olise",
+      "rating": 90
+    },
+    "clb_bayern_19": {
+      "first_name": "Serge",
+      "last_name": "Gnabry",
+      "rating": 82
+    },
+    "clb_bayern_20": {
+      "first_name": "Luis",
+      "last_name": "Diaz",
+      "rating": 88
+    },
+    "clb_bayern_21": {
+      "first_name": "Maycon",
+      "last_name": "Cardozo",
+      "rating": 67
+    },
+    "clb_bayern_22": {
+      "first_name": "Harry",
+      "last_name": "Kane",
+      "rating": 90
+    },
+    "clb_bayern_23": {
+      "first_name": "Bastian",
+      "last_name": "Assomo",
+      "rating": 67
+    },
+    "clb_bayern_24": {
+      "first_name": "Tim",
+      "last_name": "Binder",
+      "rating": 66
+    },
+    "clb_liverpool_00": {
+      "first_name": "Alisson",
+      "last_name": "Becker",
+      "rating": 87
+    },
+    "clb_liverpool_01": {
+      "first_name": "Giorgi",
+      "last_name": "Mamardashvili",
+      "rating": 76
+    },
+    "clb_liverpool_02": {
+      "first_name": "Freddie",
+      "last_name": "Woodman",
+      "rating": 73
+    },
+    "clb_liverpool_03": {
+      "first_name": "Virgil",
+      "last_name": "van Dijk",
+      "rating": 88
+    },
+    "clb_liverpool_04": {
+      "first_name": "Joe",
+      "last_name": "Gomez",
+      "rating": 80
+    },
+    "clb_liverpool_05": {
+      "first_name": "Jérémy",
+      "last_name": "Jacquet",
+      "rating": 74
+    },
+    "clb_liverpool_06": {
+      "first_name": "Giovanni",
+      "last_name": "Leoni",
+      "rating": 72
+    },
+    "clb_liverpool_07": {
+      "first_name": "Milos",
+      "last_name": "Kerkez",
+      "rating": 82
+    },
+    "clb_liverpool_08": {
+      "first_name": "Conor",
+      "last_name": "Bradley",
+      "rating": 78
+    },
+    "clb_liverpool_09": {
+      "first_name": "Kostas",
+      "last_name": "Tsimikas",
+      "rating": 79
+    },
+    "clb_liverpool_10": {
+      "first_name": "Jeremie",
+      "last_name": "Frimpong",
+      "rating": 83
+    },
+    "clb_liverpool_11": {
+      "first_name": "Wataru",
+      "last_name": "Endo",
+      "rating": 79
+    },
+    "clb_liverpool_12": {
+      "first_name": "Ronald",
+      "last_name": "Araujo",
+      "rating": 84
+    },
+    "clb_liverpool_13": {
+      "first_name": "Dominik",
+      "last_name": "Szoboszlai",
+      "rating": 85
+    },
+    "clb_liverpool_14": {
+      "first_name": "Alexis",
+      "last_name": "Mac Allister",
+      "rating": 87
+    },
+    "clb_liverpool_15": {
+      "first_name": "Ryan",
+      "last_name": "Gravenberch",
+      "rating": 82
+    },
+    "clb_liverpool_16": {
+      "first_name": "Trey",
+      "last_name": "Nyoni",
+      "rating": 68
+    },
+    "clb_liverpool_17": {
+      "first_name": "Florian",
+      "last_name": "Wirtz",
+      "rating": 86
+    },
+    "clb_liverpool_18": {
+      "first_name": "James",
+      "last_name": "McConnell",
+      "rating": 64
+    },
+    "clb_liverpool_19": {
+      "first_name": "Bradley",
+      "last_name": "Barcola",
+      "rating": 85
+    },
+    "clb_liverpool_20": {
+      "first_name": "Cody",
+      "last_name": "Gakpo",
+      "rating": 83
+    },
+    "clb_liverpool_21": {
+      "first_name": "Federico",
+      "last_name": "Chiesa",
+      "rating": 83
+    },
+    "clb_liverpool_22": {
+      "first_name": "Alexander",
+      "last_name": "Isak",
+      "rating": 86
+    },
+    "clb_liverpool_23": {
+      "first_name": "Hugo",
+      "last_name": "Ekitike",
+      "rating": 82
+    },
+    "clb_liverpool_24": {
+      "first_name": "Víctor",
+      "last_name": "Muñoz",
+      "rating": 75
+    },
+    "clb_milan_ac_00": {
+      "first_name": "Mike",
+      "last_name": "Maignan",
+      "rating": 87
+    },
+    "clb_milan_ac_01": {
+      "first_name": "Pietro",
+      "last_name": "Terracciano",
+      "rating": 74
+    },
+    "clb_milan_ac_02": {
+      "first_name": "Lorenzo",
+      "last_name": "Torriani",
+      "rating": 67
+    },
+    "clb_milan_ac_03": {
+      "first_name": "Strahinja",
+      "last_name": "Pavlović",
+      "rating": 83
+    },
+    "clb_milan_ac_04": {
+      "first_name": "Fikayo",
+      "last_name": "Tomori",
+      "rating": 84
+    },
+    "clb_milan_ac_05": {
+      "first_name": "Mario",
+      "last_name": "Gila",
+      "rating": 82
+    },
+    "clb_milan_ac_06": {
+      "first_name": "Matteo",
+      "last_name": "Gabbia",
+      "rating": 78
+    },
+    "clb_milan_ac_07": {
+      "first_name": "Pervis",
+      "last_name": "Estupiñán",
+      "rating": 83
+    },
+    "clb_milan_ac_08": {
+      "first_name": "Davide",
+      "last_name": "Bartesaghi",
+      "rating": 72
+    },
+    "clb_milan_ac_09": {
+      "first_name": "Koni",
+      "last_name": "De Winter",
+      "rating": 79
+    },
+    "clb_milan_ac_10": {
+      "first_name": "Filippo",
+      "last_name": "Terracciano",
+      "rating": 73
+    },
+    "clb_milan_ac_11": {
+      "first_name": "Ardon",
+      "last_name": "Jashari",
+      "rating": 81
+    },
+    "clb_milan_ac_12": {
+      "first_name": "Youssouf",
+      "last_name": "Fofana",
+      "rating": 84
+    },
+    "clb_milan_ac_13": {
+      "first_name": "Christian",
+      "last_name": "Pulisic",
+      "rating": 82
+    },
+    "clb_milan_ac_14": {
+      "first_name": "Luka",
+      "last_name": "Modrić",
+      "rating": 86
+    },
+    "clb_milan_ac_15": {
+      "first_name": "Ruben",
+      "last_name": "Loftus-Cheek",
+      "rating": 80
+    },
+    "clb_milan_ac_16": {
+      "first_name": "Adrien",
+      "last_name": "Rabiot",
+      "rating": 82
+    },
+    "clb_milan_ac_17": {
+      "first_name": "Diego",
+      "last_name": "Moreira",
+      "rating": 77
+    },
+    "clb_milan_ac_18": {
+      "first_name": "Yunus",
+      "last_name": "Musah",
+      "rating": 78
+    },
+    "clb_milan_ac_19": {
+      "first_name": "Alphadjo",
+      "last_name": "Cissè",
+      "rating": 69
+    },
+    "clb_milan_ac_20": {
+      "first_name": "Samuel",
+      "last_name": "Chukwueze",
+      "rating": 79
+    },
+    "clb_milan_ac_21": {
+      "first_name": "Alexis",
+      "last_name": "Saelemaekers",
+      "rating": 77
+    },
+    "clb_milan_ac_22": {
+      "first_name": "Gonçalo",
+      "last_name": "Ramos",
+      "rating": 84
+    },
+    "clb_milan_ac_23": {
+      "first_name": "Francesco",
+      "last_name": "Camarda",
+      "rating": 72
+    },
+    "clb_milan_ac_24": {
+      "first_name": "Omari",
+      "last_name": "Hutchinson",
+      "rating": 74
+    },
+    "clb_paris_00": {
+      "first_name": "Matvey",
+      "last_name": "Safonov",
+      "rating": 83
+    },
+    "clb_paris_01": {
+      "first_name": "Lucas",
+      "last_name": "Chevalier",
+      "rating": 80
+    },
+    "clb_paris_02": {
+      "first_name": "Alessandro",
+      "last_name": "Longoni",
+      "rating": 63
+    },
+    "clb_paris_03": {
+      "first_name": "Marquinhos",
+      "last_name": "Marquinhos",
+      "rating": 87
+    },
+    "clb_paris_04": {
+      "first_name": "Willian",
+      "last_name": "Pacho",
+      "rating": 89
+    },
+    "clb_paris_05": {
+      "first_name": "Ilya",
+      "last_name": "Zabarnyi",
+      "rating": 82
+    },
+    "clb_paris_06": {
+      "first_name": "Lucas",
+      "last_name": "Beraldo",
+      "rating": 77
+    },
+    "clb_paris_07": {
+      "first_name": "Achraf",
+      "last_name": "Hakimi",
+      "rating": 88
+    },
+    "clb_paris_08": {
+      "first_name": "Nuno",
+      "last_name": "Mendes",
+      "rating": 86
+    },
+    "clb_paris_09": {
+      "first_name": "Lucas",
+      "last_name": "Hernández",
+      "rating": 81
+    },
+    "clb_paris_10": {
+      "first_name": "Lucas",
+      "last_name": "Digne",
+      "rating": 80
+    },
+    "clb_paris_11": {
+      "first_name": "Vitinha",
+      "last_name": "Vitinha",
+      "rating": 90
+    },
+    "clb_paris_12": {
+      "first_name": "Warren",
+      "last_name": "Zaïre-Emery",
+      "rating": 82
+    },
+    "clb_paris_13": {
+      "first_name": "João",
+      "last_name": "Neves",
+      "rating": 88
+    },
+    "clb_paris_14": {
+      "first_name": "Fabián",
+      "last_name": "Ruiz",
+      "rating": 82
+    },
+    "clb_paris_15": {
+      "first_name": "Désiré",
+      "last_name": "Doué",
+      "rating": 83
+    },
+    "clb_paris_16": {
+      "first_name": "Senny",
+      "last_name": "Mayulu",
+      "rating": 72
+    },
+    "clb_paris_17": {
+      "first_name": "Ousmane",
+      "last_name": "Dembélé",
+      "rating": 90
+    },
+    "clb_paris_18": {
+      "first_name": "Mathis",
+      "last_name": "Akliouche",
+      "rating": 76
+    },
+    "clb_paris_19": {
+      "first_name": "Khvicha",
+      "last_name": "Kvaratskhelia",
+      "rating": 89
+    },
+    "clb_paris_20": {
+      "first_name": "Mika",
+      "last_name": "Godts",
+      "rating": 73
+    },
+    "clb_paris_21": {
+      "first_name": "Khalil",
+      "last_name": "Ayari",
+      "rating": 72
+    },
+    "clb_paris_22": {
+      "first_name": "Ferran",
+      "last_name": "Torres",
+      "rating": 82
+    },
+    "clb_paris_23": {
+      "first_name": "Randal",
+      "last_name": "Kolo Muani",
+      "rating": 83
+    },
+    "clb_paris_24": {
+      "first_name": "Quentin",
+      "last_name": "Ndjantou",
+      "rating": 64
+    },
+    "clb_dortmund_00": {
+      "first_name": "Gregor",
+      "last_name": "Kobel",
+      "rating": 87
+    },
+    "clb_dortmund_01": {
+      "first_name": "Alexander",
+      "last_name": "Meyer",
+      "rating": 73
+    },
+    "clb_dortmund_02": {
+      "first_name": "Silas",
+      "last_name": "Ostrzinski",
+      "rating": 64
+    },
+    "clb_dortmund_03": {
+      "first_name": "Nico",
+      "last_name": "Schlotterbeck",
+      "rating": 87
+    },
+    "clb_dortmund_04": {
+      "first_name": "Waldemar",
+      "last_name": "Anton",
+      "rating": 83
+    },
+    "clb_dortmund_05": {
+      "first_name": "Emre",
+      "last_name": "Can",
+      "rating": 81
+    },
+    "clb_dortmund_06": {
+      "first_name": "Joane",
+      "last_name": "Gadou",
+      "rating": 74
+    },
+    "clb_dortmund_07": {
+      "first_name": "Julian",
+      "last_name": "Ryerson",
+      "rating": 81
+    },
+    "clb_dortmund_08": {
+      "first_name": "Ramy",
+      "last_name": "Bensebaini",
+      "rating": 79
+    },
+    "clb_dortmund_09": {
+      "first_name": "Daniel",
+      "last_name": "Svensson",
+      "rating": 76
+    },
+    "clb_dortmund_10": {
+      "first_name": "Filippo",
+      "last_name": "Mané",
+      "rating": 68
+    },
+    "clb_dortmund_11": {
+      "first_name": "Felix",
+      "last_name": "Nmecha",
+      "rating": 81
+    },
+    "clb_dortmund_12": {
+      "first_name": "Marcel",
+      "last_name": "Sabitzer",
+      "rating": 80
+    },
+    "clb_dortmund_13": {
+      "first_name": "Jobe",
+      "last_name": "Bellingham",
+      "rating": 80
+    },
+    "clb_dortmund_14": {
+      "first_name": "Giannis",
+      "last_name": "Konstantelias",
+      "rating": 78
+    },
+    "clb_dortmund_15": {
+      "first_name": "Konstantinos",
+      "last_name": "Karetsas",
+      "rating": 76
+    },
+    "clb_dortmund_16": {
+      "first_name": "Joey",
+      "last_name": "Veerman",
+      "rating": 80
+    },
+    "clb_dortmund_17": {
+      "first_name": "Julian",
+      "last_name": "Brandt",
+      "rating": 83
+    },
+    "clb_dortmund_18": {
+      "first_name": "Justin",
+      "last_name": "Lerma",
+      "rating": 68
+    },
+    "clb_dortmund_19": {
+      "first_name": "Serhou",
+      "last_name": "Guirassy",
+      "rating": 87
+    },
+    "clb_dortmund_20": {
+      "first_name": "Maximilian",
+      "last_name": "Beier",
+      "rating": 82
+    },
+    "clb_dortmund_21": {
+      "first_name": "Fábio",
+      "last_name": "Silva",
+      "rating": 79
+    },
+    "clb_dortmund_22": {
+      "first_name": "Samuele",
+      "last_name": "Inácio",
+      "rating": 72
+    },
+    "clb_dortmund_23": {
+      "first_name": "Mathis",
+      "last_name": "Albert",
+      "rating": 66
+    },
+    "clb_dortmund_24": {
+      "first_name": "Carney",
+      "last_name": "Chukwuemeka",
+      "rating": 77
+    },
+    "clb_arsenal_00": {
+      "first_name": "David",
+      "last_name": "Raya",
+      "rating": 87
+    },
+    "clb_arsenal_01": {
+      "first_name": "Kepa",
+      "last_name": "Arrizabalaga",
+      "rating": 84
+    },
+    "clb_arsenal_02": {
+      "first_name": "Illan",
+      "last_name": "Meslier",
+      "rating": 79
+    },
+    "clb_arsenal_03": {
+      "first_name": "William",
+      "last_name": "Saliba",
+      "rating": 88
+    },
+    "clb_arsenal_04": {
+      "first_name": "Gabriel",
+      "last_name": "Magalhaes",
+      "rating": 89
+    },
+    "clb_arsenal_05": {
+      "first_name": "Piero",
+      "last_name": "Hincape",
+      "rating": 84
+    },
+    "clb_arsenal_06": {
+      "first_name": "Ezri",
+      "last_name": "Konsa",
+      "rating": 83
+    },
+    "clb_arsenal_07": {
+      "first_name": "Ben",
+      "last_name": "White",
+      "rating": 85
+    },
+    "clb_arsenal_08": {
+      "first_name": "Riccardo",
+      "last_name": "Calafiori",
+      "rating": 85
+    },
+    "clb_arsenal_09": {
+      "first_name": "Myles",
+      "last_name": "Lewis-Skelly",
+      "rating": 78
+    },
+    "clb_arsenal_10": {
+      "first_name": "Cristhian",
+      "last_name": "Mosquera",
+      "rating": 80
+    },
+    "clb_arsenal_11": {
+      "first_name": "Bruno",
+      "last_name": "Guimaraes",
+      "rating": 86
+    },
+    "clb_arsenal_12": {
+      "first_name": "Martin",
+      "last_name": "Zubimendi",
+      "rating": 86
+    },
+    "clb_arsenal_13": {
+      "first_name": "Declan",
+      "last_name": "Rice",
+      "rating": 88
+    },
+    "clb_arsenal_14": {
+      "first_name": "Mikel",
+      "last_name": "Merino",
+      "rating": 84
+    },
+    "clb_arsenal_15": {
+      "first_name": "Eberechi",
+      "last_name": "Eze",
+      "rating": 84
+    },
+    "clb_arsenal_16": {
+      "first_name": "Jurrien",
+      "last_name": "Timber",
+      "rating": 84
+    },
+    "clb_arsenal_17": {
+      "first_name": "Martin",
+      "last_name": "Odegaard",
+      "rating": 87
+    },
+    "clb_arsenal_18": {
+      "first_name": "Ethan",
+      "last_name": "Nwaneri",
+      "rating": 76
+    },
+    "clb_arsenal_19": {
+      "first_name": "Bukayo",
+      "last_name": "Saka",
+      "rating": 87
+    },
+    "clb_arsenal_20": {
+      "first_name": "Noni",
+      "last_name": "Madueke",
+      "rating": 84
+    },
+    "clb_arsenal_21": {
+      "first_name": "Christos",
+      "last_name": "Tzolis",
+      "rating": 82
+    },
+    "clb_arsenal_22": {
+      "first_name": "Kai",
+      "last_name": "Havertz",
+      "rating": 83
+    },
+    "clb_arsenal_23": {
+      "first_name": "Viktor",
+      "last_name": "Gyokeres",
+      "rating": 87
+    },
+    "clb_arsenal_24": {
+      "first_name": "Tommy",
+      "last_name": "Setford",
+      "rating": 70
+    },
+    "clb_inter_00": {
+      "first_name": "Josep",
+      "last_name": "Martinez",
+      "rating": 83
+    },
+    "clb_inter_01": {
+      "first_name": "Raffaele",
+      "last_name": "Di Gennaro",
+      "rating": 75
+    },
+    "clb_inter_02": {
+      "first_name": "Ivan",
+      "last_name": "Provedel",
+      "rating": 83
+    },
+    "clb_inter_03": {
+      "first_name": "Alessandro",
+      "last_name": "Bastoni",
+      "rating": 86
+    },
+    "clb_inter_04": {
+      "first_name": "Manuel",
+      "last_name": "Akanji",
+      "rating": 86
+    },
+    "clb_inter_05": {
+      "first_name": "Benjamin",
+      "last_name": "Pavard",
+      "rating": 85
+    },
+    "clb_inter_06": {
+      "first_name": "Yann Aurel",
+      "last_name": "Bisseck",
+      "rating": 81
+    },
+    "clb_inter_07": {
+      "first_name": "Federico",
+      "last_name": "Dimarco",
+      "rating": 86
+    },
+    "clb_inter_08": {
+      "first_name": "Carlos",
+      "last_name": "Augusto",
+      "rating": 81
+    },
+    "clb_inter_09": {
+      "first_name": "Djed",
+      "last_name": "Spence",
+      "rating": 81
+    },
+    "clb_inter_10": {
+      "first_name": "John",
+      "last_name": "Stones",
+      "rating": 85
+    },
+    "clb_inter_11": {
+      "first_name": "Hakan",
+      "last_name": "Calhanoglu",
+      "rating": 86
+    },
+    "clb_inter_12": {
+      "first_name": "Aleksandar",
+      "last_name": "Stankovic",
+      "rating": 80
+    },
+    "clb_inter_13": {
+      "first_name": "Nicolo",
+      "last_name": "Barella",
+      "rating": 87
+    },
+    "clb_inter_14": {
+      "first_name": "Piotr",
+      "last_name": "Zielinski",
+      "rating": 83
+    },
+    "clb_inter_15": {
+      "first_name": "Petar",
+      "last_name": "Sucic",
+      "rating": 81
+    },
+    "clb_inter_16": {
+      "first_name": "Curtis",
+      "last_name": "Jones",
+      "rating": 82
+    },
+    "clb_inter_17": {
+      "first_name": "Andy",
+      "last_name": "Diouf",
+      "rating": 80
+    },
+    "clb_inter_18": {
+      "first_name": "Henrikh",
+      "last_name": "Mkhitaryan",
+      "rating": 82
+    },
+    "clb_inter_19": {
+      "first_name": "Luis",
+      "last_name": "Henrique",
+      "rating": 82
+    },
+    "clb_inter_20": {
+      "first_name": "Marcus",
+      "last_name": "Thuram",
+      "rating": 87
+    },
+    "clb_inter_21": {
+      "first_name": "Ange-Yoan",
+      "last_name": "Bonny",
+      "rating": 80
+    },
+    "clb_inter_22": {
+      "first_name": "Lautaro",
+      "last_name": "Martinez",
+      "rating": 87
+    },
+    "clb_inter_23": {
+      "first_name": "Pio",
+      "last_name": "Esposito",
+      "rating": 77
+    },
+    "clb_inter_24": {
+      "first_name": "Kristjan",
+      "last_name": "Asllani",
+      "rating": 78
+    },
+    "clb_roma_00": {
+      "first_name": "Mile",
+      "last_name": "Svilar",
+      "rating": 82
+    },
+    "clb_roma_01": {
+      "first_name": "Pierluigi",
+      "last_name": "Gollini",
+      "rating": 80
+    },
+    "clb_roma_02": {
+      "first_name": "Devis",
+      "last_name": "Vasquez",
+      "rating": 76
+    },
+    "clb_roma_03": {
+      "first_name": "Evan",
+      "last_name": "Ndicka",
+      "rating": 84
+    },
+    "clb_roma_04": {
+      "first_name": "Gianluca",
+      "last_name": "Mancini",
+      "rating": 83
+    },
+    "clb_roma_05": {
+      "first_name": "Konstantinos",
+      "last_name": "Koulierakis",
+      "rating": 79
+    },
+    "clb_roma_06": {
+      "first_name": "Mario",
+      "last_name": "Hermoso",
+      "rating": 82
+    },
+    "clb_roma_07": {
+      "first_name": "Leonardo",
+      "last_name": "Balerdi",
+      "rating": 82
+    },
+    "clb_roma_08": {
+      "first_name": "Devyne",
+      "last_name": "Rensch",
+      "rating": 80
+    },
+    "clb_roma_09": {
+      "first_name": "Nahuel",
+      "last_name": "Molina",
+      "rating": 83
+    },
+    "clb_roma_10": {
+      "first_name": "Wesley",
+      "last_name": "Wesley",
+      "rating": 78
+    },
+    "clb_roma_11": {
+      "first_name": "Bryan",
+      "last_name": "Cristante",
+      "rating": 84
+    },
+    "clb_roma_12": {
+      "first_name": "Marten",
+      "last_name": "de Roon",
+      "rating": 82
+    },
+    "clb_roma_13": {
+      "first_name": "Lorenzo",
+      "last_name": "Pellegrini",
+      "rating": 85
+    },
+    "clb_roma_14": {
+      "first_name": "Manu",
+      "last_name": "Kone",
+      "rating": 83
+    },
+    "clb_roma_15": {
+      "first_name": "Niccolo",
+      "last_name": "Pisilli",
+      "rating": 78
+    },
+    "clb_roma_16": {
+      "first_name": "Rodrigo",
+      "last_name": "Mora",
+      "rating": 77
+    },
+    "clb_roma_17": {
+      "first_name": "Daniele",
+      "last_name": "Ghilardi",
+      "rating": 74
+    },
+    "clb_roma_18": {
+      "first_name": "Anass",
+      "last_name": "Salah-Eddine",
+      "rating": 75
+    },
+    "clb_roma_19": {
+      "first_name": "Matias",
+      "last_name": "Soule",
+      "rating": 82
+    },
+    "clb_roma_20": {
+      "first_name": "Paulo",
+      "last_name": "Dybala",
+      "rating": 86
+    },
+    "clb_roma_21": {
+      "first_name": "Donyell",
+      "last_name": "Malen",
+      "rating": 84
+    },
+    "clb_roma_22": {
+      "first_name": "Santiago",
+      "last_name": "Castro",
+      "rating": 80
+    },
+    "clb_roma_23": {
+      "first_name": "Artem",
+      "last_name": "Dovbyk",
+      "rating": 83
+    },
+    "clb_roma_24": {
+      "first_name": "Emanuele",
+      "last_name": "Lulli",
+      "rating": 68
+    },
+    "clb_leverkusen_00": {
+      "first_name": "Mark",
+      "last_name": "Flekken",
+      "rating": 84
+    },
+    "clb_leverkusen_01": {
+      "first_name": "Janis",
+      "last_name": "Blaswich",
+      "rating": 80
+    },
+    "clb_leverkusen_02": {
+      "first_name": "Niklas",
+      "last_name": "Lomb",
+      "rating": 76
+    },
+    "clb_leverkusen_03": {
+      "first_name": "Edmond",
+      "last_name": "Tapsoba",
+      "rating": 85
+    },
+    "clb_leverkusen_04": {
+      "first_name": "Loic",
+      "last_name": "Bade",
+      "rating": 83
+    },
+    "clb_leverkusen_05": {
+      "first_name": "Jarell",
+      "last_name": "Quansah",
+      "rating": 80
+    },
+    "clb_leverkusen_06": {
+      "first_name": "Facundo",
+      "last_name": "Medina",
+      "rating": 82
+    },
+    "clb_leverkusen_07": {
+      "first_name": "Miguel",
+      "last_name": "Gutierrez",
+      "rating": 81
+    },
+    "clb_leverkusen_08": {
+      "first_name": "Tim",
+      "last_name": "Oermann",
+      "rating": 77
+    },
+    "clb_leverkusen_09": {
+      "first_name": "Guela",
+      "last_name": "Doue",
+      "rating": 78
+    },
+    "clb_leverkusen_10": {
+      "first_name": "Kennet",
+      "last_name": "Eichhorn",
+      "rating": 76
+    },
+    "clb_leverkusen_11": {
+      "first_name": "Robert",
+      "last_name": "Andrich",
+      "rating": 83
+    },
+    "clb_leverkusen_12": {
+      "first_name": "Jonas",
+      "last_name": "Hofmann",
+      "rating": 83
+    },
+    "clb_leverkusen_13": {
+      "first_name": "Aleix",
+      "last_name": "Garcia",
+      "rating": 82
+    },
+    "clb_leverkusen_14": {
+      "first_name": "Equi",
+      "last_name": "Fernandez",
+      "rating": 79
+    },
+    "clb_leverkusen_15": {
+      "first_name": "Montrell",
+      "last_name": "Culbreath",
+      "rating": 72
+    },
+    "clb_leverkusen_16": {
+      "first_name": "Dennis",
+      "last_name": "Til",
+      "rating": 77
+    },
+    "clb_leverkusen_17": {
+      "first_name": "Ibrahim",
+      "last_name": "Maza",
+      "rating": 78
+    },
+    "clb_leverkusen_18": {
+      "first_name": "Martin",
+      "last_name": "Terrier",
+      "rating": 83
+    },
+    "clb_leverkusen_19": {
+      "first_name": "Patrik",
+      "last_name": "Schick",
+      "rating": 85
+    },
+    "clb_leverkusen_20": {
+      "first_name": "Victor",
+      "last_name": "Boniface",
+      "rating": 84
+    },
+    "clb_leverkusen_21": {
+      "first_name": "Malik",
+      "last_name": "Tillman",
+      "rating": 81
+    },
+    "clb_leverkusen_22": {
+      "first_name": "Nathan",
+      "last_name": "Tella",
+      "rating": 80
+    },
+    "clb_leverkusen_23": {
+      "first_name": "Eliesse",
+      "last_name": "Ben Seghir",
+      "rating": 79
+    },
+    "clb_leverkusen_24": {
+      "first_name": "Afonso",
+      "last_name": "Moreira",
+      "rating": 77
+    },
+    "clb_westham_00": {
+      "first_name": "Mads",
+      "last_name": "Hermansen",
+      "rating": 82
+    },
+    "clb_westham_01": {
+      "first_name": "Alphonse",
+      "last_name": "Areola",
+      "rating": 78
+    },
+    "clb_westham_02": {
+      "first_name": "Finlay",
+      "last_name": "Herrick",
+      "rating": 62
+    },
+    "clb_westham_03": {
+      "first_name": "Maximilian",
+      "last_name": "Kilman",
+      "rating": 80
+    },
+    "clb_westham_04": {
+      "first_name": "Konstantinos",
+      "last_name": "Mavropanos",
+      "rating": 79
+    },
+    "clb_westham_05": {
+      "first_name": "Morato",
+      "last_name": "Morato",
+      "rating": 76
+    },
+    "clb_westham_06": {
+      "first_name": "Joël",
+      "last_name": "Veltman",
+      "rating": 77
+    },
+    "clb_westham_07": {
+      "first_name": "Kyle",
+      "last_name": "Walker-Peters",
+      "rating": 80
+    },
+    "clb_westham_08": {
+      "first_name": "Ollie",
+      "last_name": "Scarles",
+      "rating": 74
+    },
+    "clb_westham_09": {
+      "first_name": "Adama",
+      "last_name": "Boiro",
+      "rating": 73
+    },
+    "clb_westham_10": {
+      "first_name": "Edson",
+      "last_name": "Álvarez",
+      "rating": 83
+    },
+    "clb_westham_11": {
+      "first_name": "Soungoutou",
+      "last_name": "Magassa",
+      "rating": 77
+    },
+    "clb_westham_12": {
+      "first_name": "Tomáš",
+      "last_name": "Souček",
+      "rating": 81
+    },
+    "clb_westham_13": {
+      "first_name": "Arne",
+      "last_name": "Engels",
+      "rating": 78
+    },
+    "clb_westham_14": {
+      "first_name": "Lewis",
+      "last_name": "Orford",
+      "rating": 70
+    },
+    "clb_westham_15": {
+      "first_name": "Divine",
+      "last_name": "Mukasa",
+      "rating": 76
+    },
+    "clb_westham_16": {
+      "first_name": "Manor",
+      "last_name": "Solomon",
+      "rating": 80
+    },
+    "clb_westham_17": {
+      "first_name": "Jarrod",
+      "last_name": "Bowen",
+      "rating": 84
+    },
+    "clb_westham_18": {
+      "first_name": "Maxwel",
+      "last_name": "Cornet",
+      "rating": 76
+    },
+    "clb_westham_19": {
+      "first_name": "Taty",
+      "last_name": "Castellanos",
+      "rating": 82
+    },
+    "clb_westham_20": {
+      "first_name": "Joël",
+      "last_name": "Piroe",
+      "rating": 78
+    },
+    "clb_westham_21": {
+      "first_name": "Pablo",
+      "last_name": "Pablo",
+      "rating": 74
+    },
+    "clb_westham_22": {
+      "first_name": "Edvin",
+      "last_name": "Austbø",
+      "rating": 73
+    },
+    "clb_westham_23": {
+      "first_name": "Keiber",
+      "last_name": "Lamadrid",
+      "rating": 71
+    },
+    "clb_westham_24": {
+      "first_name": "Joshua",
+      "last_name": "Ajala",
+      "rating": 65
+    },
+    "clb_monaco_00": {
+      "first_name": "Lukas",
+      "last_name": "Hradecky",
+      "rating": 81
+    },
+    "clb_monaco_01": {
+      "first_name": "Philipp",
+      "last_name": "Köhn",
+      "rating": 77
+    },
+    "clb_monaco_02": {
+      "first_name": "Jules",
+      "last_name": "Stawiecki",
+      "rating": 62
+    },
+    "clb_monaco_03": {
+      "first_name": "Mohammed",
+      "last_name": "Salisu",
+      "rating": 78
+    },
+    "clb_monaco_04": {
+      "first_name": "Eric",
+      "last_name": "Dier",
+      "rating": 77
+    },
+    "clb_monaco_05": {
+      "first_name": "Christian",
+      "last_name": "Mawissa",
+      "rating": 74
+    },
+    "clb_monaco_06": {
+      "first_name": "Jordan",
+      "last_name": "Teze",
+      "rating": 79
+    },
+    "clb_monaco_07": {
+      "first_name": "Vanderson",
+      "last_name": "Vanderson",
+      "rating": 82
+    },
+    "clb_monaco_08": {
+      "first_name": "Flávio",
+      "last_name": "Nazinho",
+      "rating": 76
+    },
+    "clb_monaco_09": {
+      "first_name": "Sadibou",
+      "last_name": "Sané",
+      "rating": 70
+    },
+    "clb_monaco_10": {
+      "first_name": "Denis",
+      "last_name": "Zakaria",
+      "rating": 82
+    },
+    "clb_monaco_11": {
+      "first_name": "Lamine",
+      "last_name": "Camara",
+      "rating": 79
+    },
+    "clb_monaco_12": {
+      "first_name": "Edan",
+      "last_name": "Diop",
+      "rating": 74
+    },
+    "clb_monaco_13": {
+      "first_name": "Aleksandr",
+      "last_name": "Golovin",
+      "rating": 83
+    },
+    "clb_monaco_14": {
+      "first_name": "Stanis",
+      "last_name": "Idumbo",
+      "rating": 75
+    },
+    "clb_monaco_15": {
+      "first_name": "Takumi",
+      "last_name": "Minamino",
+      "rating": 78
+    },
+    "clb_monaco_16": {
+      "first_name": "Mamadou",
+      "last_name": "Coulibaly",
+      "rating": 73
+    },
+    "clb_monaco_17": {
+      "first_name": "Mathys",
+      "last_name": "Detourbet",
+      "rating": 77
+    },
+    "clb_monaco_18": {
+      "first_name": "Paris",
+      "last_name": "Brunner",
+      "rating": 79
+    },
+    "clb_monaco_19": {
+      "first_name": "Matthis",
+      "last_name": "Abline",
+      "rating": 76
+    },
+    "clb_monaco_20": {
+      "first_name": "Folarin",
+      "last_name": "Balogun",
+      "rating": 81
+    },
+    "clb_monaco_21": {
+      "first_name": "Mika",
+      "last_name": "Biereth",
+      "rating": 77
+    },
+    "clb_monaco_22": {
+      "first_name": "Ansu",
+      "last_name": "Fati",
+      "rating": 78
+    },
+    "clb_monaco_23": {
+      "first_name": "Pape",
+      "last_name": "Cabral",
+      "rating": 72
+    },
+    "clb_monaco_24": {
+      "first_name": "Samuel",
+      "last_name": "Nibombé",
+      "rating": 65
+    },
+    "clb_bilbao_00": {
+      "first_name": "Unai",
+      "last_name": "Simón",
+      "rating": 84
+    },
+    "clb_bilbao_01": {
+      "first_name": "Álex",
+      "last_name": "Padilla",
+      "rating": 74
+    },
+    "clb_bilbao_02": {
+      "first_name": "Unai",
+      "last_name": "Egiluz",
+      "rating": 66
+    },
+    "clb_bilbao_03": {
+      "first_name": "Dani",
+      "last_name": "Vivian",
+      "rating": 82
+    },
+    "clb_bilbao_04": {
+      "first_name": "Aitor",
+      "last_name": "Paredes",
+      "rating": 80
+    },
+    "clb_bilbao_05": {
+      "first_name": "Aymeric",
+      "last_name": "Laporte",
+      "rating": 83
+    },
+    "clb_bilbao_06": {
+      "first_name": "Yeray",
+      "last_name": "Álvarez",
+      "rating": 79
+    },
+    "clb_bilbao_07": {
+      "first_name": "Andoni",
+      "last_name": "Gorosabel",
+      "rating": 79
+    },
+    "clb_bilbao_08": {
+      "first_name": "Yuri",
+      "last_name": "Berchiche",
+      "rating": 78
+    },
+    "clb_bilbao_09": {
+      "first_name": "Iñigo",
+      "last_name": "Lekue",
+      "rating": 77
+    },
+    "clb_bilbao_10": {
+      "first_name": "Mikel",
+      "last_name": "Vesga",
+      "rating": 78
+    },
+    "clb_bilbao_11": {
+      "first_name": "Iñigo",
+      "last_name": "Ruiz de Galarreta",
+      "rating": 79
+    },
+    "clb_bilbao_12": {
+      "first_name": "Oihan",
+      "last_name": "Sancet",
+      "rating": 84
+    },
+    "clb_bilbao_13": {
+      "first_name": "Beñat",
+      "last_name": "Prados",
+      "rating": 75
+    },
+    "clb_bilbao_14": {
+      "first_name": "Mikel",
+      "last_name": "Jauregizar",
+      "rating": 74
+    },
+    "clb_bilbao_15": {
+      "first_name": "Alejandro",
+      "last_name": "Rego",
+      "rating": 72
+    },
+    "clb_bilbao_16": {
+      "first_name": "Álex",
+      "last_name": "Berenguer",
+      "rating": 80
+    },
+    "clb_bilbao_17": {
+      "first_name": "Nico",
+      "last_name": "Williams",
+      "rating": 86
+    },
+    "clb_bilbao_18": {
+      "first_name": "Nico",
+      "last_name": "Serrano",
+      "rating": 75
+    },
+    "clb_bilbao_19": {
+      "first_name": "Iñaki",
+      "last_name": "Williams",
+      "rating": 83
+    },
+    "clb_bilbao_20": {
+      "first_name": "Gorka",
+      "last_name": "Guruzeta",
+      "rating": 81
+    },
+    "clb_bilbao_21": {
+      "first_name": "Maroan",
+      "last_name": "Sannadi",
+      "rating": 74
+    },
+    "clb_bilbao_22": {
+      "first_name": "Robert",
+      "last_name": "Navarro",
+      "rating": 76
+    },
+    "clb_bilbao_23": {
+      "first_name": "Unai",
+      "last_name": "Gómez",
+      "rating": 73
+    },
+    "clb_bilbao_24": {
+      "first_name": "Asier",
+      "last_name": "Hierro",
+      "rating": 70
+    },
+    "clb_leicester_00": {
+      "first_name": "Jakub",
+      "last_name": "Stolarczyk",
+      "rating": 76
+    },
+    "clb_leicester_01": {
+      "first_name": "Franco",
+      "last_name": "Ravizzoli",
+      "rating": 72
+    },
+    "clb_leicester_02": {
+      "first_name": "Alex",
+      "last_name": "McCarthy",
+      "rating": 70
+    },
+    "clb_leicester_03": {
+      "first_name": "Wout",
+      "last_name": "Faes",
+      "rating": 79
+    },
+    "clb_leicester_04": {
+      "first_name": "Caleb",
+      "last_name": "Okoli",
+      "rating": 77
+    },
+    "clb_leicester_05": {
+      "first_name": "Ben",
+      "last_name": "Nelson",
+      "rating": 73
+    },
+    "clb_leicester_06": {
+      "first_name": "Harry",
+      "last_name": "Souttar",
+      "rating": 75
+    },
+    "clb_leicester_07": {
+      "first_name": "Jayden",
+      "last_name": "Joseph",
+      "rating": 72
+    },
+    "clb_leicester_08": {
+      "first_name": "Woyo",
+      "last_name": "Coulibaly",
+      "rating": 74
+    },
+    "clb_leicester_09": {
+      "first_name": "Luke",
+      "last_name": "Thomas",
+      "rating": 75
+    },
+    "clb_leicester_10": {
+      "first_name": "John",
+      "last_name": "Lundstram",
+      "rating": 76
+    },
+    "clb_leicester_11": {
+      "first_name": "Oliver",
+      "last_name": "Skipp",
+      "rating": 77
+    },
+    "clb_leicester_12": {
+      "first_name": "Sammy",
+      "last_name": "Braybrooke",
+      "rating": 71
+    },
+    "clb_leicester_13": {
+      "first_name": "Michael",
+      "last_name": "Golding",
+      "rating": 70
+    },
+    "clb_leicester_14": {
+      "first_name": "Will",
+      "last_name": "Alves",
+      "rating": 73
+    },
+    "clb_leicester_15": {
+      "first_name": "Conor",
+      "last_name": "Chaplin",
+      "rating": 75
+    },
+    "clb_leicester_16": {
+      "first_name": "Wes",
+      "last_name": "Burns",
+      "rating": 76
+    },
+    "clb_leicester_17": {
+      "first_name": "Liam",
+      "last_name": "Cullen",
+      "rating": 74
+    },
+    "clb_leicester_18": {
+      "first_name": "Bobby",
+      "last_name": "De Cordova-Reid",
+      "rating": 77
+    },
+    "clb_leicester_19": {
+      "first_name": "Emil",
+      "last_name": "Riis",
+      "rating": 76
+    },
+    "clb_leicester_20": {
+      "first_name": "Admir",
+      "last_name": "Bristrić",
+      "rating": 73
+    },
+    "clb_leicester_21": {
+      "first_name": "Tommy",
+      "last_name": "Watson",
+      "rating": 70
+    },
+    "clb_leicester_22": {
+      "first_name": "Kamari",
+      "last_name": "Doyle",
+      "rating": 71
+    },
+    "clb_leicester_23": {
+      "first_name": "Harry",
+      "last_name": "Howell",
+      "rating": 68
+    },
+    "clb_leicester_24": {
+      "first_name": "Louis",
+      "last_name": "Page",
+      "rating": 65
+    },
+    "clb_manutd_00": {
+      "first_name": "Senne",
+      "last_name": "Lammens",
+      "rating": 82
+    },
+    "clb_manutd_01": {
+      "first_name": "Karl",
+      "last_name": "Darlow",
+      "rating": 74
+    },
+    "clb_manutd_02": {
+      "first_name": "Tom",
+      "last_name": "Heaton",
+      "rating": 72
+    },
+    "clb_manutd_03": {
+      "first_name": "Matthijs",
+      "last_name": "de Ligt",
+      "rating": 84
+    },
+    "clb_manutd_04": {
+      "first_name": "Lisandro",
+      "last_name": "Martinez",
+      "rating": 84
+    },
+    "clb_manutd_05": {
+      "first_name": "Harry",
+      "last_name": "Maguire",
+      "rating": 82
+    },
+    "clb_manutd_06": {
+      "first_name": "Leny",
+      "last_name": "Yoro",
+      "rating": 83
+    },
+    "clb_manutd_07": {
+      "first_name": "Diogo",
+      "last_name": "Dalot",
+      "rating": 81
+    },
+    "clb_manutd_08": {
+      "first_name": "Noussair",
+      "last_name": "Mazraoui",
+      "rating": 80
+    },
+    "clb_manutd_09": {
+      "first_name": "Patrick",
+      "last_name": "Dorgu",
+      "rating": 80
+    },
+    "clb_manutd_10": {
+      "first_name": "Luke",
+      "last_name": "Shaw",
+      "rating": 79
+    },
+    "clb_manutd_11": {
+      "first_name": "Manuel",
+      "last_name": "Ugarte",
+      "rating": 82
+    },
+    "clb_manutd_12": {
+      "first_name": "Carlos",
+      "last_name": "Baleba",
+      "rating": 83
+    },
+    "clb_manutd_13": {
+      "first_name": "Youri",
+      "last_name": "Tielemans",
+      "rating": 84
+    },
+    "clb_manutd_14": {
+      "first_name": "Andrey",
+      "last_name": "Santos",
+      "rating": 82
+    },
+    "clb_manutd_15": {
+      "first_name": "Kobbie",
+      "last_name": "Mainoo",
+      "rating": 83
+    },
+    "clb_manutd_16": {
+      "first_name": "Jack",
+      "last_name": "Fletcher",
+      "rating": 66
+    },
+    "clb_manutd_17": {
+      "first_name": "Bruno",
+      "last_name": "Fernandes",
+      "rating": 89
+    },
+    "clb_manutd_18": {
+      "first_name": "Mason",
+      "last_name": "Mount",
+      "rating": 79
+    },
+    "clb_manutd_19": {
+      "first_name": "Amad",
+      "last_name": "Diallo",
+      "rating": 84
+    },
+    "clb_manutd_20": {
+      "first_name": "Bryan",
+      "last_name": "Mbeumo",
+      "rating": 86
+    },
+    "clb_manutd_21": {
+      "first_name": "Marcus",
+      "last_name": "Rashford",
+      "rating": 83
+    },
+    "clb_manutd_22": {
+      "first_name": "Benjamin",
+      "last_name": "Sesko",
+      "rating": 85
+    },
+    "clb_manutd_23": {
+      "first_name": "Joshua",
+      "last_name": "Zirkzee",
+      "rating": 81
+    },
+    "clb_manutd_24": {
+      "first_name": "Matheus",
+      "last_name": "Cunha",
+      "rating": 85
+    },
+    "clb_sfax_00": {
+      "first_name": "Mohamed Hedi",
+      "last_name": "Gaaloul",
+      "rating": 70
+    },
+    "clb_sfax_01": {
+      "first_name": "Aymen",
+      "last_name": "Dahmen",
+      "rating": 67
+    },
+    "clb_sfax_02": {
+      "first_name": "Malek",
+      "last_name": "Araysi",
+      "rating": 60
+    },
+    "clb_sfax_03": {
+      "first_name": "Kévin",
+      "last_name": "Mondeko",
+      "rating": 71
+    },
+    "clb_sfax_04": {
+      "first_name": "Mohamed Amine",
+      "last_name": "Ben Ali",
+      "rating": 68
+    },
+    "clb_sfax_05": {
+      "first_name": "Abdessalem",
+      "last_name": "Akid",
+      "rating": 66
+    },
+    "clb_sfax_06": {
+      "first_name": "Firas",
+      "last_name": "Sekkouhi",
+      "rating": 62
+    },
+    "clb_sfax_07": {
+      "first_name": "Ali",
+      "last_name": "Maâloul",
+      "rating": 74
+    },
+    "clb_sfax_08": {
+      "first_name": "Hamza",
+      "last_name": "Mathlouthi",
+      "rating": 72
+    },
+    "clb_sfax_09": {
+      "first_name": "Rayane",
+      "last_name": "Derbali",
+      "rating": 66
+    },
+    "clb_sfax_10": {
+      "first_name": "Hichem",
+      "last_name": "Baccar",
+      "rating": 61
+    },
+    "clb_sfax_11": {
+      "first_name": "Thameur",
+      "last_name": "Abidi",
+      "rating": 69
+    },
+    "clb_sfax_12": {
+      "first_name": "Mohamed",
+      "last_name": "Absi",
+      "rating": 64
+    },
+    "clb_sfax_13": {
+      "first_name": "Travis",
+      "last_name": "Mutyaba",
+      "rating": 70
+    },
+    "clb_sfax_14": {
+      "first_name": "Ammar",
+      "last_name": "Taifour",
+      "rating": 68
+    },
+    "clb_sfax_15": {
+      "first_name": "Nour",
+      "last_name": "Karoui",
+      "rating": 65
+    },
+    "clb_sfax_16": {
+      "first_name": "Bouara",
+      "last_name": "Diarra",
+      "rating": 63
+    },
+    "clb_sfax_17": {
+      "first_name": "Iyed",
+      "last_name": "Belwafi",
+      "rating": 68
+    },
+    "clb_sfax_18": {
+      "first_name": "Mohamed Amine",
+      "last_name": "Aidi",
+      "rating": 62
+    },
+    "clb_sfax_19": {
+      "first_name": "Willy",
+      "last_name": "Onana",
+      "rating": 70
+    },
+    "clb_sfax_20": {
+      "first_name": "Emmanuel Agaba",
+      "last_name": "Ogbole",
+      "rating": 67
+    },
+    "clb_sfax_21": {
+      "first_name": "Rayan",
+      "last_name": "Chaâban",
+      "rating": 61
+    },
+    "clb_sfax_22": {
+      "first_name": "Omar",
+      "last_name": "Ben Ali",
+      "rating": 71
+    },
+    "clb_sfax_23": {
+      "first_name": "Youssef",
+      "last_name": "Becha",
+      "rating": 59
+    },
+    "clb_sfax_24": {
+      "first_name": "Mohamed Salah",
+      "last_name": "Mhadhebi",
+      "rating": 57
+    }
   }
 }
