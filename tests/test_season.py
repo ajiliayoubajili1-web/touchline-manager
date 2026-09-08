@@ -114,15 +114,15 @@ class RolloverTest(unittest.TestCase):
                     for after in [state.players[p.id]])
         self.assertGreater(gains, 0, "young players should improve overall")
 
-    def test_academy_hires_are_young_and_grow(self):
+    def test_academy_intake_is_young_and_club_attached(self):
         state = finished_career()
         start_next_season(state)
-        youths = [state.players[pid] for club in state.clubs.values() for pid in club.squad_ids
-                  if "_youth_" in pid and pid in state.players]
-        self.assertTrue(youths)
+        intake = [state.players[pid] for club in state.clubs.values() for pid in club.squad_ids
+                  if pid in state.players and ("_youth_" in pid or "_aca_" in pid)]
+        self.assertTrue(intake)
         new_year = int(state.current_season.split("-")[0])
-        self.assertTrue(all(p.age_as_of(new_year) <= 18 for p in youths))
-        self.assertTrue(all(p.club_id for p in youths), "academy players must be attached to a club")
+        self.assertTrue(all(p.age_as_of(new_year) <= 19 for p in intake), "academy intake must be young")
+        self.assertTrue(all(p.club_id for p in intake), "academy players must be attached to a club")
         market_view_state = market_view(state)
         declared = [t for t in market_view_state["targets"] if t["kind"] == "academy"]
         self.assertTrue(all(t["age"] <= 21 for t in declared))

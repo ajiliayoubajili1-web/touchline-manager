@@ -357,6 +357,72 @@ class GameService:
             raise ServiceError(str(exc)) from exc
         return training_view(state)
 
+    # ---- academy & scouting actions -----------------------------------
+
+    def _act_promote(self, payload: dict) -> dict:
+        from manager.systems.scouting import ScoutingError, promote_to_first_team
+
+        state = self.require_career()
+        try:
+            promote_to_first_team(state, payload.get("player_id", ""))
+        except ScoutingError as exc:
+            raise ServiceError(str(exc)) from exc
+        return self.view_model("academy")
+
+    def _act_demote(self, payload: dict) -> dict:
+        from manager.systems.scouting import ScoutingError, demote_to_academy
+
+        state = self.require_career()
+        try:
+            demote_to_academy(state, payload.get("player_id", ""))
+        except ScoutingError as exc:
+            raise ServiceError(str(exc)) from exc
+        return self.view_model("academy")
+
+    def _act_hire_scout(self, payload: dict) -> dict:
+        from manager.systems.scouting import ScoutingError, hire_scout
+
+        state = self.require_career()
+        try:
+            hire_scout(state)
+        except ScoutingError as exc:
+            raise ServiceError(str(exc)) from exc
+        return self.view_model("academy")
+
+    def _act_fire_scout(self, payload: dict) -> dict:
+        from manager.systems.scouting import ScoutingError, fire_scout
+
+        state = self.require_career()
+        try:
+            fire_scout(state, payload.get("scout_id", ""))
+        except ScoutingError as exc:
+            raise ServiceError(str(exc)) from exc
+        return self.view_model("academy")
+
+    def _act_scout_search(self, payload: dict) -> dict:
+        from manager.systems.scouting import ScoutingError, search_now
+
+        state = self.require_career()
+        try:
+            search_now(state)
+        except ScoutingError as exc:
+            raise ServiceError(str(exc)) from exc
+        return self.view_model("academy")
+
+    def _act_sign_discovery(self, payload: dict) -> dict:
+        from manager.systems.scouting import ScoutingError, sign_discovery
+
+        state = self.require_career()
+        try:
+            sign_discovery(
+                state,
+                payload.get("discovery_id", ""),
+                payload.get("target", "academy"),
+            )
+        except ScoutingError as exc:
+            raise ServiceError(str(exc)) from exc
+        return self.view_model("academy")
+
     # ---- queries ---------------------------------------------------------
 
     def query(self, name: str, params: dict) -> dict:
@@ -409,6 +475,9 @@ class GameService:
     def _q_training(self, params: dict) -> dict:
         return training_view(self.require_career())
 
+    def _q_academy(self, params: dict) -> dict:
+        return self.view_model("academy")
+
     def _q_news(self, params: dict) -> dict:
         return news_view(
             self.require_career(),
@@ -447,6 +516,8 @@ class GameService:
             return squad_view(state)
         if name == "tactics":
             return tactics_view(state)
+        if name == "academy":
+            return academy_view(state)
         raise ServiceError(f"no view model {name!r}")
 
 
@@ -625,6 +696,85 @@ def training_view(state: CareerState) -> dict:
         "intensities": INTENSITIES,
         "duties": DUTIES,
         "players": rows,
+    }
+
+
+def academy_view(state: CareerState) -> dict:
+    club = state.user_club()
+    year = _season_year(state.current_season)
+    from manager.systems.scouting import (
+        ACADEMY_HARD_CAP,
+        MAX_CONCURRENT_DISCOVERIES,
+        MAX_SCOUTS,
+        MAX_SQUAD_SIZE,
+        _discovery_player,
+        academy_roster,
+        can_hire_scout,
+    )
+
+    roster_rows = []
+    talent_count = 0
+    for pid in academy_roster(state, club.id):
+        player = state.players.get(pid)
+        if player is None:
+            continue
+        row = _player_row(state, player, set(), set())
+        row["talent"] = player.potential >= 80
+        talent_count += int(row["talent"])
+        roster_rows.append(row)
+    roster_rows.sort(key=lambda r: (-r["overall"], r["last_name"]))
+
+    scouts = []
+    for scout in state.scouts.get(club.id, []):
+        scouts.append({
+            "id": scout.id,
+            "name": scout.full_name,
+            "nationality": scout.nationality,
+            "region": scout.region,
+            "rating": scout.rating,
+            "wage": scout.weekly_wage,
+            "next_in_weeks": max(0, scout.next_discovery_week - state.current_week),
+        })
+
+    discoveries = []
+    for discovery in state.discoveries.get(club.id, []):
+        player = _discovery_player(state, discovery)
+        discover_scouts = {s.id: s for s in state.scouts.get(club.id, [])}
+        scout = discover_scouts.get(discovery.scout_id)
+        discoveries.append({
+            "id": discovery.id,
+            "name": player.full_name,
+            "nationality": player.nationality,
+            "position": str(player.preferred_position),
+            "age": player.age_as_of(year),
+            "overall": player.overall,
+            "potential": player.potential,
+            "talent": player.potential >= 80,
+            "region": discovery.region,
+            "scout": scout.full_name if scout else "",
+            "fee": discovery.signing_fee,
+            "expires_in": max(0, discovery.expires_week - state.current_week),
+        })
+    discoveries.sort(key=lambda d: -d["potential"])
+
+    return {
+        "role": "academy",
+        "club": {"id": club.id, "name": club.name, "primary": club.primary_color, "secondary": club.secondary_color},
+        "squad_count": len(club.squad_ids),
+        "squad_max": MAX_SQUAD_SIZE,
+        "academy_count": len(roster_rows),
+        "academy_max": ACADEMY_HARD_CAP,
+        "talent_count": talent_count,
+        "scouts": scouts,
+        "scouts_max": MAX_SCOUTS,
+        "can_hire_scout": can_hire_scout(state),
+        "discoveries": discoveries,
+        "discoveries_max": MAX_CONCURRENT_DISCOVERIES,
+        "finances": {
+            "transfer_budget": club.finances.transfer_budget,
+            "balance": club.finances.balance,
+        },
+        "players": roster_rows,
     }
 
 

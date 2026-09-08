@@ -67,10 +67,13 @@ def _generate_incoming_offers(state: CareerState) -> None:
         return
 
     club = state.user_club()
+    squad_ids = set(club.squad_ids)
     rng = SeededRng(state.seed)
     candidates = []
     for player in state.players.values():
         if player.retired or player.club_id != club.id or player.loaned_from is not None:
+            continue
+        if player.id not in squad_ids:
             continue
         if player.contract is None:
             continue

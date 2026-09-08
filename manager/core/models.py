@@ -434,6 +434,39 @@ class IncomingOffer:
 
 
 @dataclass
+class Scout:
+    """A recruited talent scout for a club's academy."""
+
+    id: str
+    first_name: str
+    last_name: str
+    nationality: str
+    region: str
+    rating: int
+    weekly_wage: int
+    hired_week: int
+    next_discovery_week: int
+
+    @property
+    def full_name(self) -> str:
+        return f"{self.first_name} {self.last_name}"
+
+
+@dataclass
+class Discovery:
+    """A young talent a scout has found, offered to the user club for a fee."""
+
+    id: str
+    player_id: str
+    scout_id: str
+    club_id: str
+    region: str
+    found_week: int
+    expires_week: int
+    signing_fee: int
+
+
+@dataclass
 class CareerState:
     version: int
     career_id: str
@@ -454,6 +487,9 @@ class CareerState:
     incoming_offers: list[IncomingOffer] = field(default_factory=list)
     selections: dict[str, SquadSelection] = field(default_factory=dict)
     matchday_history: list[str] = field(default_factory=list)
+    academy: dict[str, list[str]] = field(default_factory=dict)
+    scouts: dict[str, list[Scout]] = field(default_factory=dict)
+    discoveries: dict[str, list[Discovery]] = field(default_factory=dict)
     created_at: str = ""
     title: str = ""
 

@@ -332,6 +332,7 @@ const NAV = [
   { key: "standings", label: "League table" },
   { key: "cup", label: "Continental Cup" },
   { key: "transfers", label: "Transfers" },
+  { key: "academy", label: "Academy" },
   { key: "training", label: "Training" },
   { key: "news", label: "News" },
   { key: "club", label: "Club finances", soon: true },
@@ -347,6 +348,7 @@ const labels = {
   standings: "League table",
   cup: "Continental Cup",
   transfers: "Transfers",
+  academy: "Academy",
   training: "Training",
   news: "News",
   club: "Club finances",
@@ -440,6 +442,8 @@ async function loadView(name) {
       renderCup(await query("cup"));
     } else if (name === "transfers") {
       renderTransfers(await query("market"));
+    } else if (name === "academy") {
+      renderAcademy(await query("academy"));
     } else if (name === "training") {
       renderTraining(await query("training"));
     } else if (name === "news") {
@@ -928,7 +932,7 @@ async function renderSquad(data) {
         <td class="muted">${esc(p.contract_end)}</td>
         <td>${p.form}</td>
         <td>${p.morale}</td>
-        <td>${inj}${susp}${p.loanable ? `<button class="btn ghost" data-loan-out="${esc(p.id)}">Loan out</button>` : ""}</td>
+        <td>${inj}${susp}${p.loanable ? `<button class="btn ghost" data-loan-out="${esc(p.id)}">Loan out</button>` : ""}${p.age <= 21 ? `<button class="btn ghost" style="margin-left:4px" data-demote="${esc(p.id)}">To academy</button>` : ""}</td>
       </tr>`;
   }).join("");
 
@@ -943,6 +947,19 @@ async function renderSquad(data) {
         const fresh = await action("loan_out", { player_id: pid });
         renderSquad(fresh);
         document.getElementById("selMessage").innerHTML = banner(fresh.message, "ok");
+      } catch (err) {
+        document.getElementById("selMessage").innerHTML = banner(err.message);
+      }
+    });
+  });
+  rows.querySelectorAll("[data-demote]").forEach((btn) => {
+    btn.addEventListener("click", async (e) => {
+      e.stopPropagation();
+      const pid = btn.dataset.demote;
+      try {
+        const fresh = await action("demote", { player_id: pid });
+        document.getElementById("selMessage").innerHTML = banner("Moved to the academy.", "ok");
+        renderSquad(await query("squad"));
       } catch (err) {
         document.getElementById("selMessage").innerHTML = banner(err.message);
       }
@@ -1709,6 +1726,174 @@ function renderTraining(data) {
       }
     });
   });
+}
+
+/* ---------------------------------------------------------------- academy */
+
+const ACADEMY_POS_LABEL = {
+  GK: "Goalkeeper", CB: "Centre-back", FB: "Full-back", DM: "Defensive mid",
+  CM: "Central mid", AM: "Attacking mid", W: "Winger", ST: "Striker",
+};
+
+function renderAcademy(data, errorMsg = "") {
+  const content = document.getElementById("content");
+  const chips = (label, value, tone = "") => `
+    <div class="stat"><div class="label">${esc(label)}</div><div class="value">${value}</div></div>`;
+  content.innerHTML = `
+    <div id="academyMsg">${banner(errorMsg, "error")}</div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:14px">
+      ${chips("First-team", `${data.squad_count}<span style="opacity:.55">/${data.squad_max}</span>`)}
+      ${chips("Academy", `${data.academy_count}<span style="opacity:.55">/${data.academy_max}</span>`)}
+      ${chips("Talents", data.talent_count)}
+      ${chips("Budget", fmtMoney(data.finances.transfer_budget))}
+      ${chips("Balance", fmtMoney(data.finances.balance))}
+    </div>
+
+    <div class="card">
+      <h2>Scouts <span class="badge">${data.scouts.length}/${data.scouts_max}</span></h2>
+      <p class="muted" style="margin:0 0 10px">
+        Scouts find hidden young talent around the world and flag them as <strong>discoveries</strong>.
+        Their next find arrives automatically; the search button forces an immediate sweep.
+      </p>
+      ${data.scouts.length ? `
+        <table>
+          <thead><tr><th>Scout</th><th>Region</th><th>Rating</th><th>Next find</th><th>Wage</th><th></th></tr></thead>
+          <tbody>
+            ${data.scouts.map((s) => `
+              <tr>
+                <td><strong>${esc(s.name)}</strong><br><span class="muted" style="font-size:12px">${esc(s.nationality)}</span></td>
+                <td>${esc(s.region)}</td>
+                <td>${s.rating}</td>
+                <td>${s.next_in_weeks ? `in ${s.next_in_weeks} wk` : "now"}</td>
+                <td class="muted">${fmtMoney(s.wage)}/wk</td>
+                <td><button class="btn ghost" style="padding:4px 10px;font-size:12.5px" data-fire="${esc(s.id)}">Fire</button></td>
+              </tr>`).join("")}
+          </tbody>
+        </table>`
+      : `<p class="muted">No scouts yet — hire one to start discovering talent.</p>`}
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+        <button class="btn" id="hireScout" ${data.can_hire_scout ? "" : "disabled"}>
+          Hire scout
+        </button>
+        <button class="btn ghost" id="scoutSearch" ${data.scouts.length ? "" : "disabled"}>Search</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Discoveries <span class="badge">${data.discoveries.length}/${data.discoveries_max}</span></h2>
+      ${data.discoveries.length ? `
+        <table>
+          <thead><tr><th>Player</th><th>Pos</th><th>Age</th><th>Rating</th><th>Region</th><th>Fee</th><th>Expires</th><th></th></tr></thead>
+          <tbody>
+            ${data.discoveries.map((d) => `
+              <tr>
+                <td><strong>${esc(d.name)}</strong><br>
+                  <span class="muted" style="font-size:12px">${esc(d.nationality)}${d.talent ? ' <span class="badge pos">talent</span>' : ""}</span></td>
+                <td>${esc(ACADEMY_POS_LABEL[d.position] || d.position)}</td>
+                <td>${d.age}</td>
+                <td>${d.overall} <span class="muted" style="font-size:12px">(pot ${d.potential})</span></td>
+                <td>${esc(d.region)}${d.scout ? `<br><span class="muted" style="font-size:12px">via ${esc(d.scout)}</span>` : ""}</td>
+                <td>${fmtMoney(d.fee)}</td>
+                <td class="muted">${d.expires_in === 1 ? "1 wk" : `${d.expires_in} wks`}</td>
+                <td style="white-space:nowrap">
+                  <button class="btn ghost" style="padding:4px 10px;font-size:12.5px" data-sign="${esc(d.id)}" data-target="academy">To academy</button>
+                  <button class="btn" style="padding:4px 10px;font-size:12.5px" data-sign="${esc(d.id)}" data-target="first_team">To first team</button>
+                </td>
+              </tr>`).join("")}
+          </tbody>
+        </table>`
+      : `<p class="muted">No live discoveries right now. Hire scouts and search to uncover young talent.</p>`}
+    </div>
+
+    <div class="card">
+      <h2>Academy squad <span class="badge">${data.academy_count} players</span></h2>
+      <p class="muted" style="margin:0 0 10px">
+        Your youth side feeds the first team, letting the next generation grow quietly
+        until you promote them. Players rated at <strong>80+ potential</strong> are marked as talents.
+      </p>
+      ${data.players.length ? `
+        <table>
+          <thead><tr><th></th><th>Player</th><th>Pos</th><th>Age</th><th>Rating</th><th></th></tr></thead>
+          <tbody>
+            ${data.players.map((p) => `
+              <tr>
+                <td style="width:44px">${playerPhoto(p)}</td>
+                <td><strong>${esc(p.full_name)}</strong><br>
+                  <span class="muted" style="font-size:12px">${esc(p.nationality)}${p.talent ? ' <span class="badge pos">talent</span>' : ""}</span></td>
+                <td>${esc(ACADEMY_POS_LABEL[p.preferred_position] || p.preferred_position)}</td>
+                <td>${p.age}</td>
+                <td>${p.overall} <span class="muted" style="font-size:12px">(pot ${p.potential})</span></td>
+                <td><button class="btn" style="padding:4px 10px;font-size:12.5px" ${data.squad_count >= data.squad_max ? "disabled" : ""}
+                  data-promote="${esc(p.id)}">Promote</button></td>
+              </tr>`).join("")}
+          </tbody>
+        </table>`
+      : `<p class="muted">No academy players yet.</p>`}
+    </div>`;
+
+  const msg = document.getElementById("academyMsg");
+
+  const hireBtn = document.getElementById("hireScout");
+  if (hireBtn) hireBtn.addEventListener("click", () => academyAction("hire_scout", {}, msg));
+  const searchBtn = document.getElementById("scoutSearch");
+  if (searchBtn) searchBtn.addEventListener("click", () => academyAction("scout_search", {}, msg));
+
+  document.querySelectorAll("[data-fire]").forEach((btn) => {
+    btn.addEventListener("click", () => academyAction("fire_scout", { scout_id: btn.dataset.fire }, msg));
+  });
+  document.querySelectorAll("[data-promote]").forEach((btn) => {
+    btn.addEventListener("click", () => academyAction("promote", { player_id: btn.dataset.promote }, msg));
+  });
+  document.querySelectorAll("[data-sign]").forEach((btn) => {
+    const d = data.discoveries.find((x) => x.id === btn.dataset.sign);
+    if (!d) return;
+    btn.addEventListener("click", () => {
+      askSignDiscovery(d, btn.dataset.target, data);
+    });
+  });
+}
+
+async function academyAction(cmd, payload, msgEl) {
+  try {
+    const fresh = await action(cmd, payload);
+    renderAcademy(fresh);
+  } catch (err) {
+    const fresh = await query("academy").catch(() => null);
+    if (fresh) renderAcademy(fresh, err.message);
+    else if (msgEl) msgEl.innerHTML = banner(err.message);
+  }
+}
+
+function askSignDiscovery(discovery, target, data) {
+  const into = target === "first_team" ? "the first team" : "the academy";
+  const overlay = openModal(`Sign ${discovery.name}`, `
+    <p class="muted" style="margin:0 0 12px">
+      ${esc(discovery.nationality)} &middot; ${esc(ACADEMY_POS_LABEL[discovery.position] || discovery.position)} &middot;
+      age ${discovery.age} &middot; rating ${discovery.overall} (potential ${discovery.potential})${discovery.talent ? " &middot; <span class='pill'>talented</span>" : ""}
+    </p>
+    <label class="field"><span>Transfer fee</span>
+      <input type="number" id="signFee" value="${discovery.fee}" min="0" step="250000" disabled></label>
+    <p class="muted" style="margin:0;font-size:12.5px">
+      Fee comes out of the transfer budget (<strong>${fmtMoney(data.finances.transfer_budget)}</strong>).
+      The player joins ${into} with a standard youth contract and trains there.
+      Discoveries expire after a few weeks — sign before the trail goes cold.
+    </p>`);
+  overlay.querySelector("#modalConfirm").addEventListener("click", () => {
+    runAcademySign(discovery.id, target);
+    overlay.remove();
+  });
+}
+
+async function runAcademySign(discoveryId, target) {
+  const content = document.getElementById("content");
+  try {
+    const fresh = await action("sign_discovery", { discovery_id: discoveryId, target });
+    renderAcademy(fresh);
+  } catch (err) {
+    const fresh = await query("academy").catch(() => null);
+    if (fresh) renderAcademy(fresh, err.message);
+    else content.innerHTML = banner(err.message);
+  }
 }
 
 /* ------------------------------------------------------------- banner+save */

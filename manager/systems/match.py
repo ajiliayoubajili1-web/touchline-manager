@@ -96,6 +96,9 @@ def simulate_week(state: CareerState) -> dict:
     from manager.systems.development import development_tick
     development_tick(state, next_week)
 
+    from manager.systems.scouting import process_scouting
+    process_scouting(state, next_week)
+
     state.current_week = next_week
     season.current_week = next_week
     if next_week >= season.total_weeks:

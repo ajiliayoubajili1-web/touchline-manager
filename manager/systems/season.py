@@ -168,7 +168,21 @@ def _academy_intake(state: CareerState, new_year: int, season_id: str) -> None:
 
     rng = SeededRng(state.seed ^ 0xACA0E7)
     roles = ["GK", "CB", "FB", "DM", "CM", "AM", "W", "ST"]
+
+    def _fill_from_academy(club) -> None:
+        roster = list(state.academy.get(club.id) or [])
+        while roster and len(club.squad_ids) < SQUAD_SIZE:
+            player_id = roster.pop(0)
+            if player_id not in state.players or player_id in club.squad_ids:
+                continue
+            club.squad_ids.append(player_id)
+        state.academy[club.id] = roster
+
     for club in state.clubs.values():
+        missing = SQUAD_SIZE - len(club.squad_ids)
+        if missing <= 0:
+            continue
+        _fill_from_academy(club)
         missing = SQUAD_SIZE - len(club.squad_ids)
         if missing <= 0:
             continue

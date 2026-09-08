@@ -137,6 +137,9 @@ def new_career(
     selection = build_best_xi(club_id, squad)
     state.selections[club_id] = selection
 
+    from manager.systems.scouting import ensure_academies
+    ensure_academies(state)
+
     return state
 
 
@@ -153,9 +156,12 @@ def continue_career(career_id: str, save_dir=None):
     if not career_id:
         raise CareerError("no career id provided")
     try:
-        return read_save(career_id, save_dir)
+        state = read_save(career_id, save_dir)
     except SaveError as exc:
         raise CareerError(str(exc)) from exc
+    from manager.systems.scouting import ensure_academies
+    ensure_academies(state)
+    return state
 
 
 def _career_title(club_name: str, season_id: str) -> str:
