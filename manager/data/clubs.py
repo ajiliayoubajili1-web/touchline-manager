@@ -46,7 +46,7 @@ CLUB_DEFS: list[ClubDef] = [
     ClubDef("leicester", "Leicester City", "Leicester", "King Power Stadium", 32262, "#003090", "#fdb515", 76, 1884),
     ClubDef("como", "Como", "Como", "Stadio Sinigaglia", 13602, "#2563eb", "#ffffff", 70, 1907),
     # --- one very, very bad club ----------------------------------------
-    ClubDef("sfax", "Club Sportif Sfaxien", "Sfax", "Stade Taieb Mhiri", 11000, "#000000", "#feca00", 42, 1928),
+    ClubDef("sfax", "Club Sportif Sfaxien", "Sfax", "Stade Taieb Mhiri", 11000, "#000000", "#ffffff", 42, 1928),
 ]
 
 REPUTATION_ORDER = sorted((d.slug for d in CLUB_DEFS), key=lambda s: next(d.reputation for d in CLUB_DEFS if d.slug == s), reverse=True)
