@@ -570,6 +570,13 @@ function nextMatchCard(data) {
         <span class="vs"><span>${crest(data.club.name)}${esc(data.club.name)}</span><span class="vs-sep">vs</span><span>${crest(m.opponent)}${esc(m.opponent)}</span></span>
       </div>
       <p class="muted" style="margin:2px 0 0">${at}</p>
+      ${m.pred_win != null ? `
+      <div class="pred-bar" style="margin-top:12px">
+        <div class="pred-seg pred-win" style="width:${m.pred_win}%" title="Win ${m.pred_win}%"></div>
+        <div class="pred-seg pred-draw" style="width:${m.pred_draw}%" title="Draw ${m.pred_draw}%"></div>
+        <div class="pred-seg pred-loss" style="width:${m.pred_loss}%" title="Loss ${m.pred_loss}%"></div>
+      </div>
+      <p class="muted" style="margin:6px 0 0; font-size:13px">Prediction: <strong>Win ${m.pred_win}%</strong> &middot; Draw ${m.pred_draw}% &middot; Loss ${m.pred_loss}%</p>` : ""}
     </div>`;
 }
 
@@ -1125,7 +1132,7 @@ function renderFixtures(data) {
         <h2>${esc(month.replace(" (cup)", ""))}
           ${month.includes("(cup)") ? '<span class="pill">cup month</span>' : ""}</h2>
         <table>
-          <thead><tr><th>Date</th><th>Comp</th><th>Match</th><th>Venue</th><th>Score</th></tr></thead>
+          <thead><tr><th>Date</th><th>Comp</th><th>Match</th><th>Venue</th><th>Prediction</th><th>Score</th></tr></thead>
           <tbody>
             ${fixtures.map((f) => `
               <tr class="${f.played ? (f.result ? "result-" + f.result.toLowerCase() : "played-row") : (nextWeek && f.id === nextWeek.id ? "row-next" : "row-me")} ${f.played ? "played-row" : ""}">
@@ -1135,6 +1142,7 @@ function renderFixtures(data) {
                 <td>${f.cup ? `<span class="pill">${esc(f.competition)}</span> <span class="muted">${esc(f.round || "")}</span>` : `<span class="muted">${esc(f.competition)}</span>`}</td>
                 <td><strong>${crest(f.home)}${esc(f.home)}</strong> <span class="muted">vs</span> <strong>${crest(f.away)}${esc(f.away)}</strong></td>
                 <td>${f.venue === "Home" ? '<span class="pill good">H</span>' : '<span class="pill bad">A</span>'}</td>
+                <td class="muted">${f.pred_home != null ? `${f.pred_home}% / ${f.pred_draw}% / ${f.pred_away}%` : ""}</td>
                 <td>${f.played ? `<strong>${esc(f.score)}</strong>` : '<span class="muted">scheduled</span>'}</td>
               </tr>`).join("")}
           </tbody>
@@ -1147,6 +1155,7 @@ function renderFixtures(data) {
           &middot; ${esc(nextWeek.venue.toLowerCase())}
           ${nextWeek.date_label ? `&middot; ${esc(nextWeek.date_label)}` : `&middot; week ${nextWeek.week}`}
           &middot; ${esc(nextWeek.competition)}</span>
+        <span class="muted">${nextWeek.pred_home != null ? `Prediction: ${nextWeek.pred_home}% / ${nextWeek.pred_draw}% / ${nextWeek.pred_away}%` : ""}</span>
         <button class="btn" data-next-gp>Open game plan</button>
       </div>
     </div>` : ""}`;

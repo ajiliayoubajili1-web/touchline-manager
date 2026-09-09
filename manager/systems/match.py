@@ -210,6 +210,56 @@ def simulate_match(state: CareerState, fixture: Fixture, is_user: bool = False) 
 # Internals
 # ---------------------------------------------------------------------------
 
+def match_probabilities(state: CareerState, fixture: Fixture, is_user: bool = False) -> tuple[int, int, int]:
+    """Predicted (home win, draw, away win) percentages for a fixture.
+
+    Uses the same XI resolution, strength model and xG expectations as the live
+    simulation, so the forecast tracks exactly what the sim will lean toward.
+    No RNG is consumed, so the numbers are stable across reloads.
+    """
+    home_ids = resolve_lineup(state, fixture.home_club_id, is_user and fixture.home_club_id == state.user_club_id)
+    away_ids = resolve_lineup(state, fixture.away_club_id, is_user and fixture.away_club_id == state.user_club_id)
+    home_players = [state.players[pid] for pid in home_ids]
+    away_players = [state.players[pid] for pid in away_ids]
+    home_strength = _team_strength(home_players)
+    away_strength = _team_strength(away_players)
+    if home_strength <= 0:
+        home_strength = 1.0
+    if away_strength <= 0:
+        away_strength = 1.0
+
+    xg_home, xg_away, _possession = _match_expectations(home_strength, away_strength)
+    home_mind, away_mind = _mentalities(state, fixture)
+    home_own, home_opp = _mentality_factors(home_mind)
+    away_own, away_opp = _mentality_factors(away_mind)
+    xg_home = _clamp(xg_home * home_own * away_opp, 0.15, 4.0)
+    xg_away = _clamp(xg_away * away_own * home_opp, 0.15, 4.0)
+
+    home_win, draw, away_win = _poisson_outcome(xg_home, xg_away)
+    return round(home_win * 100), round(draw * 100), round(away_win * 100)
+
+
+def _poisson_outcome(xg_home: float, xg_away: float) -> tuple[float, float, float]:
+    """Integrate independent Poisson goal distributions into W/D/L probabilities."""
+    max_goals = 18
+    ph = [math.exp(-xg_home) * (xg_home ** k) / math.factorial(k) for k in range(0, max_goals + 1)]
+    pa = [math.exp(-xg_away) * (xg_away ** k) / math.factorial(k) for k in range(0, max_goals + 1)]
+    home_win = draw = away_win = 0.0
+    for i in range(max_goals + 1):
+        for j in range(max_goals + 1):
+            p = ph[i] * pa[j]
+            if i > j:
+                home_win += p
+            elif i == j:
+                draw += p
+            else:
+                away_win += p
+    total = home_win + draw + away_win
+    if total <= 0:
+        return 0.334, 0.333, 0.333
+    return home_win / total, draw / total, away_win / total
+
+
 def _team_strength(players: list[Player]) -> float:
     if not players:
         return 0.0

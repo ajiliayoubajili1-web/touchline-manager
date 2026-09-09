@@ -213,6 +213,11 @@ tr.row-next td { background: rgba(56, 189, 248, 0.12); }
 .cal-date strong { display: block; font-size: 13.5px; }
 .cal-date span { display: block; font-size: 11px; }
 .next-match-card { border-color: var(--accent-2); background: linear-gradient(180deg, rgba(52, 211, 153, 0.06), var(--panel)); }
+.pred-bar { display: flex; height: 6px; border-radius: 999px; overflow: hidden; background: var(--line); }
+.pred-seg { height: 100%; }
+.pred-win { background: var(--accent-2, #34d399); }
+.pred-draw { background: #fbbf24; }
+.pred-loss { background: var(--danger, #f87171); }
 
 /* ---- FC-style game plan ---- */
 .pitch {

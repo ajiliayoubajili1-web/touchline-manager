@@ -31,6 +31,7 @@ from manager.core.enums import (
 )
 from manager.core.models import CareerState, Club, Player
 from manager.core.validate import ValidationError, validate_squad_selection, validate_tactics
+from manager.systems.match import match_probabilities
 from manager.systems.squads import build_best_xi
 from manager.save.files import delete_save, list_saves
 from manager.data.coaches import coach_by_key, roster
@@ -1004,6 +1005,7 @@ def next_match_view(state: CareerState) -> dict | None:
     away = state.club(fixture.away_club_id)
     comp = state.competitions.get(fixture.competition_id)
     is_home = fixture.home_club_id == state.user_club_id
+    pred_home, pred_draw, pred_away = match_probabilities(state, fixture, is_user=True)
     return {
         "week": fixture.week,
         "competition": comp.name if comp else fixture.competition_id,
@@ -1014,6 +1016,9 @@ def next_match_view(state: CareerState) -> dict | None:
         "date": fixture.date,
         "date_label": _date_label(fixture.date) if fixture.date else f"Week {fixture.week}",
         "fixture_id": fixture.id,
+        "pred_win": pred_home if is_home else pred_away,
+        "pred_draw": pred_draw,
+        "pred_loss": pred_away if is_home else pred_home,
     }
 
 
@@ -1061,6 +1066,11 @@ def fixtures_view(state: CareerState) -> dict:
                 month = day.strftime("%B")
             except ValueError:
                 pass
+        is_played = fixture.status.value == "played"
+        pred = {}
+        if not is_played:
+            p_home, p_draw, p_away = match_probabilities(state, fixture, is_user=True)
+            pred = {"pred_home": p_home, "pred_draw": p_draw, "pred_away": p_away}
         rows.append({
             "week": fixture.week,
             "date": fixture.date,
@@ -1075,10 +1085,11 @@ def fixtures_view(state: CareerState) -> dict:
             "competition_id": fixture.competition_id,
             "cup": fixture.round != "",
             "round": fixture.round,
-            "played": fixture.status.value == "played",
+            "played": is_played,
             "score": f"{fixture.home_goals}-{fixture.away_goals}" if fixture.score else None,
             "is_user": True,
             "result": _user_result(state, fixture),
+            **pred,
         })
     return {
         "role": "fixtures",
